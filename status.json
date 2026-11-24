@@ -1,9 +1,9 @@
 {
- "checked_at_msk": "2026-11-25 00:24:22",
- "checked_at_utc": "2026-11-24T21:24:22+00:00",
+ "checked_at_msk": "2026-11-25 00:32:50",
+ "checked_at_utc": "2026-11-24T21:32:50+00:00",
  "probe": "DESKTOP-SIN6RQ6",
  "direct_ip": "5.187.86.30",
- "duration_s": 141,
+ "duration_s": 232,
  "keys": [
   {
    "name": "VPNTYPE 🇮🇹 Milan",
@@ -12,7 +12,7 @@
    "status": "PASS",
    "exit_ip": "212.2.35.145",
    "loc": "DE",
-   "latency_ms": 392,
+   "latency_ms": 391,
    "engine": "sing-box",
    "error": null
   },
@@ -34,7 +34,7 @@
    "status": "PASS",
    "exit_ip": "88.216.68.162",
    "loc": "US",
-   "latency_ms": 889,
+   "latency_ms": 880,
    "engine": "sing-box",
    "error": null
   },
@@ -48,6 +48,61 @@
    "latency_ms": null,
    "engine": "xray",
    "error": "сервер не принимает подключения на порт 8443 (таймаут)"
+  },
+  {
+   "name": "AmneziaWG Амстердам 5",
+   "protocol": "WireGuard",
+   "server": "ams5.vpntype.dev:2500",
+   "status": "FAIL",
+   "exit_ip": null,
+   "loc": null,
+   "latency_ms": null,
+   "engine": "sing-box",
+   "error": "\u001b[31mERROR\u001b[0m[0002] [\u001b[38;5;104m1372783704\u001b[0m 0ms] connection: open connection to cloudflare.com:443 using outbound/wireguard[out]: WireGuard is not ready yet"
+  },
+  {
+   "name": "AmneziaWG in-ru001",
+   "protocol": "WireGuard",
+   "server": "in-ru001.vpntype.dev:2000",
+   "status": "FAIL",
+   "exit_ip": null,
+   "loc": null,
+   "latency_ms": null,
+   "engine": "sing-box",
+   "error": "нет ответа через туннель"
+  },
+  {
+   "name": "OpenVPN in-ru001:1021",
+   "protocol": "OpenVPN UDP",
+   "server": "in-ru001.vpntype.dev:1021",
+   "status": "PASS",
+   "exit_ip": "88.216.68.162",
+   "loc": "US",
+   "latency_ms": 762,
+   "engine": "ovpn-socks",
+   "error": null
+  },
+  {
+   "name": "OpenVPN in-ru006 (Milan)",
+   "protocol": "OpenVPN UDP",
+   "server": "in-ru006.vpntype.dev:1194",
+   "status": "PASS",
+   "exit_ip": "147.45.60.38",
+   "loc": "US",
+   "latency_ms": 985,
+   "engine": "ovpn-socks",
+   "error": null
+  },
+  {
+   "name": "OpenVPN mos5",
+   "protocol": "OpenVPN UDP",
+   "server": "mos5.vpntype.dev:1194",
+   "status": "FAIL",
+   "exit_ip": null,
+   "loc": null,
+   "latency_ms": null,
+   "engine": "ovpn-socks",
+   "error": "error: tunnel: openvpn handshake error: context deadline exceeded"
   }
  ]
 }
