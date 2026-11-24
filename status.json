@@ -1,9 +1,9 @@
 {
- "checked_at_msk": "2026-11-25 00:15:53",
- "checked_at_utc": "2026-11-24T21:15:53+00:00",
+ "checked_at_msk": "2026-11-25 00:24:22",
+ "checked_at_utc": "2026-11-24T21:24:22+00:00",
  "probe": "DESKTOP-SIN6RQ6",
  "direct_ip": "5.187.86.30",
- "duration_s": 135,
+ "duration_s": 141,
  "keys": [
   {
    "name": "VPNTYPE 🇮🇹 Milan",
@@ -12,7 +12,7 @@
    "status": "PASS",
    "exit_ip": "212.2.35.145",
    "loc": "DE",
-   "latency_ms": 380,
+   "latency_ms": 392,
    "engine": "sing-box",
    "error": null
   },
@@ -34,7 +34,7 @@
    "status": "PASS",
    "exit_ip": "88.216.68.162",
    "loc": "US",
-   "latency_ms": 900,
+   "latency_ms": 889,
    "engine": "sing-box",
    "error": null
   },
