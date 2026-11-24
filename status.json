@@ -1,0 +1,53 @@
+{
+ "checked_at_msk": "2026-11-25 00:15:53",
+ "checked_at_utc": "2026-11-24T21:15:53+00:00",
+ "probe": "DESKTOP-SIN6RQ6",
+ "direct_ip": "5.187.86.30",
+ "duration_s": 135,
+ "keys": [
+  {
+   "name": "VPNTYPE 🇮🇹 Milan",
+   "protocol": "Shadowsocks",
+   "server": "in-ru006.vpntype.dev:8388",
+   "status": "PASS",
+   "exit_ip": "212.2.35.145",
+   "loc": "DE",
+   "latency_ms": 380,
+   "engine": "sing-box",
+   "error": null
+  },
+  {
+   "name": "🇩🇪 Франкфурт 3",
+   "protocol": "VLESS Reality",
+   "server": "fra3.vpntype.dev:8443",
+   "status": "FAIL",
+   "exit_ip": null,
+   "loc": null,
+   "latency_ms": null,
+   "engine": "xray",
+   "error": "сервер не принимает подключения на порт 8443 (таймаут)"
+  },
+  {
+   "name": "🇺🇸 Чикаго",
+   "protocol": "VLESS Reality",
+   "server": "chi1.vpntype.dev:8443",
+   "status": "PASS",
+   "exit_ip": "88.216.68.162",
+   "loc": "US",
+   "latency_ms": 900,
+   "engine": "sing-box",
+   "error": null
+  },
+  {
+   "name": "🇦🇪 Дубай 2",
+   "protocol": "VLESS Reality",
+   "server": "dub2.vpntype.dev:8443",
+   "status": "FAIL",
+   "exit_ip": null,
+   "loc": null,
+   "latency_ms": null,
+   "engine": "xray",
+   "error": "сервер не принимает подключения на порт 8443 (таймаут)"
+  }
+ ]
+}
