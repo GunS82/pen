@@ -1,5 +1,5 @@
 # Рабочие конфигурации VPN
-# Проверка: 25.11.2026 14:11 МСК, SIN6
+# Проверка: 25.11.2026 14:26 МСК, SIN6
 # Ключей в файле: 4. Только те, что прошли эту проверку.
 # Под вопросом и недоступные сюда не входят.
 # Каждый блок копируется отдельно: строка ss:// или vless://, либо текст профиля под комментарием.
@@ -9,11 +9,11 @@
 ss://YWVzLTI1Ni1nY206VWk0ckFhOEdvTzMzdkxmRQ==@in-ru006.vpntype.dev:8388#VPNTYPE 🇮🇹 Milan
 
 # 2. 🇺🇸 Чикаго
-# VLESS Reality, chi1.vpntype.dev:8443, выход 88.216.68.162 (US), LinkedIn, 16 КБ
+# VLESS Reality, chi1.vpntype.dev:8443, выход 88.216.68.162 (US), LinkedIn, 480 КБ
 vless://ab8d5c11-2830-4583-be30-14fda11de7b6@chi1.vpntype.dev:8443?security=reality&type=tcp&flow=xtls-rprx-vision&encryption=none&sni=chi1.vpntype.dev&pbk=CW7HP_X2T37NQIYGms-bPJdPn9t1dyQuFI0ySPu4aFQ&fp=safari&sid=#🇺🇸 Чикаго
 
 # 3. OpenVPN in-ru001:1021
-# OpenVPN UDP, in-ru001.vpntype.dev:1021, выход 88.216.68.162 (US), LinkedIn, 480 КБ
+# OpenVPN UDP, in-ru001.vpntype.dev:1021, выход 88.216.68.162 (US), LinkedIn, 16 КБ
 client
 proto udp
 dev tun
@@ -110,7 +110,7 @@ ZeffY8GiPY0fA7o1Istkz7idzaKD5VSm
 </auth-user-pass>
 
 # 4. OpenVPN in-ru006 (Milan)
-# OpenVPN UDP, in-ru006.vpntype.dev:1194, выход 147.45.60.38 (US), LinkedIn, 480 КБ
+# OpenVPN UDP, in-ru006.vpntype.dev:1194, выход 147.45.60.38 (US), LinkedIn, 16 КБ
 client
 proto udp
 dev tun
