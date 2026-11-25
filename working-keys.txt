@@ -1,14 +1,15 @@
 # Ручки для дверей
 
 # 1. VPNTYPE 🇮🇹 Milan
-# = хороший · 5,8 Мбит/с · 373 мс
+# = приемлемый · 4,2 Мбит/с · 446 мс
 ss://YWVzLTI1Ni1nY206VWk0ckFhOEdvTzMzdkxmRQ==@in-ru006.vpntype.dev:8388#VPNTYPE 🇮🇹 Milan
 
 # 2. 🇺🇸 Чикаго
+# = хороший · 6,4 Мбит/с · 934 мс
 vless://ab8d5c11-2830-4583-be30-14fda11de7b6@chi1.vpntype.dev:8443?security=reality&type=tcp&flow=xtls-rprx-vision&encryption=none&sni=chi1.vpntype.dev&pbk=CW7HP_X2T37NQIYGms-bPJdPn9t1dyQuFI0ySPu4aFQ&fp=safari&sid=#🇺🇸 Чикаго
 
 # 3. OpenVPN in-ru001:1021
-# = отличный · 11 Мбит/с · 1011 мс
+# = отличный · 11 Мбит/с · 824 мс
 client
 proto udp
 dev tun
@@ -102,4 +103,104 @@ aN22SfOpRtuYYnxwEYoIgVc=
 <auth-user-pass>
 user3140786
 ZeffY8GiPY0fA7o1Istkz7idzaKD5VSm
+</auth-user-pass>
+
+# 4. OpenVPN in-ru006 (Milan)
+# = отличный · 10 Мбит/с · 2039 мс
+client
+proto udp
+dev tun
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+remote-cert-tls server
+verify-x509-name server name
+auth SHA256
+auth-user-pass
+cipher AES-128-GCM
+tls-client
+tls-version-min 1.2
+tls-cipher TLS-ECDHE-RSA-WITH-AES-128-GCM-SHA256:TLS-ECDHE-ECDSA-WITH-AES-128-GCM-SHA256
+ignore-unknown-option block-outside-dns
+verb 3
+remote in-ru006.vpntype.dev 1194
+<ca>
+-----BEGIN CERTIFICATE-----
+MIIDSzCCAjOgAwIBAgIUKio26oYvU5reePFV+ucpkX+zPu4wDQYJKoZIhvcNAQEL
+BQAwFjEUMBIGA1UEAwwLRWFzeS1SU0EgQ0EwHhcNMjYwMzI1MTQzMzQ3WhcNMzYw
+MzIyMTQzMzQ3WjAWMRQwEgYDVQQDDAtFYXN5LVJTQSBDQTCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAKItG06ZJXJEF9/bNle18BQc3SunodgfhhqB2+OI
+yBXSv32T0+1HwUv/41fc6mQpkF/DVmB0IhLkMBgInPMh2faNKXT1dv97P5lPWjCD
+gGoXPSR7c8DbivF5yztkzJ4HIlhl0AAldlQj/N1G9IN+tK1t8dYtCiHQoOk9yjBw
+Vh48bmvzusEiw1a8RsMfkX6CZ32fuskTYYKlofrtJKwr/b5vx1aOiRjMi2JRYAC5
+V1cjH1Kf09aQg+4sYqg3T47v3j1hGFKx4aezss53JrsHzmkCmMTrhbHX4RAurp31
+RS4CQrUtngdNxB/Wm5LJnjnfO0hFfHqMa3zKOwhNJofn0dsCAwEAAaOBkDCBjTAd
+BgNVHQ4EFgQUDBDwQg2/kheBkeNwFIwtM5AJSrIwUQYDVR0jBEowSIAUDBDwQg2/
+kheBkeNwFIwtM5AJSrKhGqQYMBYxFDASBgNVBAMMC0Vhc3ktUlNBIENBghQqKjbq
+hi9Tmt548VX65ymRf7M+7jAMBgNVHRMEBTADAQH/MAsGA1UdDwQEAwIBBjANBgkq
+hkiG9w0BAQsFAAOCAQEAhBNqSBpB8WFyRFo+yGzGsy3sSwFQZ9ZdPthzx7CEoaNv
+X6je53SQBvj/944MwUhiPDzmSWVQwNoVBTZkB+2FOp4/ViGr0qaCpHWjgkq72nqO
+ELOKtx3CwhTAbujvwT0/xpNd5i3nvvfBqCDL6UvzsTRTWZCeXme4XSUqVLkZxLD8
+OAUHq/Vjw0TA5NILlzsTtY98i30tAnVKqSnibGaZVx5t6IE/m6mPOcYG+PtoHM0A
+bq61Y9x2jZAOdJIbvswpvA18lLhfvYE0Bp96K6iK7U+hW9bT9F8n2PpBaLIzRor4
+Day0hiPjCs5wtsD+5vEiZh3xOorO5jVV2O8XHq1WAQ==
+-----END CERTIFICATE-----
+</ca>
+<cert>
+-----BEGIN CERTIFICATE-----
+MIIDbjCCAlagAwIBAgIQYfy6bqjBPfzta9c8MHQ1ajANBgkqhkiG9w0BAQsFADAW
+MRQwEgYDVQQDDAtFYXN5LVJTQSBDQTAeFw0yNjAzMjUxNDMzNDdaFw0yODA2Mjcx
+NDMzNDdaMCsxKTAnBgNVBAMMIFhYbUFyZjRGdURJdG1ocVRmckNndTF1QTR0Y3hv
+Qm1BMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2kA7EW2RCU+fnVFK
+8DcHK+5UdJmC8Kw0f90iVYZismhlKfhYb2XHRGcQZ42x2e5gd4LIm57haPgUaRVC
+enviqt00aVrZNgj2vxNU6aZTIAaCJiHaKqNTs3++3h/FnZQ+oCQuB4letdV0H2vp
+m35dQukWXe1kWZXBONVsKJ/6lpKYHetoIBk/ekRFPJkxxxYWlzxWqYcgimTssvC7
+9o+NO0fAlBfvV48CD4DagLZl8FNx/77PXqdIsJTODmEsULZpR3ObNvvT+6XQI/jR
+6sdzEcFl8j/M5mdqBs/JVH4A6/rLhi6kfP/2Yg59LdAV3lVqmS6dgj1aYyosdF7h
+fY+6pwIDAQABo4GiMIGfMAkGA1UdEwQCMAAwHQYDVR0OBBYEFNAQH392Nl2K/Zt5
+GgWZaJF6tbCDMFEGA1UdIwRKMEiAFAwQ8EINv5IXgZHjcBSMLTOQCUqyoRqkGDAW
+MRQwEgYDVQQDDAtFYXN5LVJTQSBDQYIUKio26oYvU5reePFV+ucpkX+zPu4wEwYD
+VR0lBAwwCgYIKwYBBQUHAwIwCwYDVR0PBAQDAgeAMA0GCSqGSIb3DQEBCwUAA4IB
+AQAI4Xp0Tg1lOicYJtHPTpHUZ7TPD8U75KRXs7FLNJNyfhkEb90hWubDSbUErjuK
+ohPfmKS3UCbAQM/YtkNBSSmaf0B9z0fnRoTBbrepVey3SVITDOIZGPuXRXjF5t50
+bt/k9hFZzFVTRlZbCaLTtbboADYr9q7uD+NZlMLLb9Cvyibt9fHiMvXz3bE/rP5M
+ZSvnbN3G0peKTu90q6pAWk/oYQp4NNfaRXKP9135Pd1RMmKHJA6SBbL3+xuTFSI8
+Bw0vhMIldWleSe8SksDJDdsXXB/5Pb3bM54xOZfnRIFPa0jmnhTXoPz5TZVHt0cf
+xwHpB34B+R/CZf9QqorflR/k
+-----END CERTIFICATE-----
+</cert>
+<key>
+-----BEGIN PRIVATE KEY-----
+MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDaQDsRbZEJT5+d
+UUrwNwcr7lR0mYLwrDR/3SJVhmKyaGUp+FhvZcdEZxBnjbHZ7mB3gsibnuFo+BRp
+FUJ6e+Kq3TRpWtk2CPa/E1TpplMgBoImIdoqo1Ozf77eH8WdlD6gJC4HiV611XQf
+a+mbfl1C6RZd7WRZlcE41Wwon/qWkpgd62ggGT96REU8mTHHFhaXPFaphyCKZOyy
+8Lv2j407R8CUF+9XjwIPgNqAtmXwU3H/vs9ep0iwlM4OYSxQtmlHc5s2+9P7pdAj
++NHqx3MRwWXyP8zmZ2oGz8lUfgDr+suGLqR8//ZiDn0t0BXeVWqZLp2CPVpjKix0
+XuF9j7qnAgMBAAECggEAb+5fHNoPdzIBz0Hg5/+gyvQJFl+gmuQGbMkxkaFBPvRx
+Zav7Vu5g2wDsld9Cpl0t1j0Zu04plpcciKQhmwWsQyr9dUblfWPtgCNe+hGWMieE
+WiAkbpejFrzeW7b5t45O6/yCKtVV4HWff3ntrhSJqgY2tWdJfvRhy08RkGgzsUJ8
+82Kp+jEHK+DARf+NdnEU6NHHifc9VctzTakr12/MHyVHuIICn/kJcPOEoJx+yONg
+nZEnLPew9GsxZmOuLCD7Cd+EIjA6jQ/Y3dH35Hj694GmDJEsokhvnNqMd8qwJ0ue
+FzL63uRRXxbx1Q79OrrrmrTTQbYOAyIVakTreE7tkQKBgQD0Dmi6ALUIkJiUymEh
+Jj1EQDXT9ef5d22sGO8DYCX61NTCkZ03/JoUjr9FYuzqZnqsGshn+GJpVRxIx9kZ
+cRBNc+ScKjfQUWgUF3g0C1n5SMUPq+aaz/E+WhwpUHmtI8P0Z5LeGZGCEp9xteSY
+ZjuLxzaeDxzoVyEGsR7X35fsDwKBgQDk7oavB7Q1WiMlaGr2fvbhqkq+maSwBPvE
+qgdBI96qHlr+VMkwRp2SAWCS2m7Ty9HzzrGHhIAJ2WbaAVeXD3TxS/MAaGm08hmt
+p/UhGkYrw9jyPrUSlv2MS8efqakYuydQmO4IgEYfZ8v1sVPEIz5vVuuHoyGqj3dc
+zBclcjsP6QKBgC0ZyJKu9MV7ayb7600j8uh88TWVWOQKBPNrvCekigA7eoHmROaG
+wLaR1pjs+hkrDPpnDKfiB9WtS8fLXrxL35Zgl1uglaXilVg5KhZ8Dol5wCjwPHJZ
+gRxjrJaZ75JmbJzq0wJGOVSPOnXaBj9/jPt8ugQliNMK3uiMrMV55WpTAoGAPC1C
+9AFXamrOMEgZTcAkDz+fNCjY9Hfq4lA7ZfES167xBketNuZpBvcbtp56YWwDPU5I
+tjGrImumMIoHxyqF9+OZ9bJ8jtbQzygGNHRem6R4g3zeRguwjE9jIuILE/gmJnZ8
+o3lsdVbocyXwue71u3iiot3LvLTHkHoJX4t+YPkCgYBu5oUJgTNPKPWhwiDsqLFo
+68rq8vtOFQ559CobBTGtAarEOkdDFO873Ir/kOn09WMrWspD9PiR8uC/NhzJmrYW
++NKPf6oFHoQvykKsMBPezHh/ikqBbKnUs6MlVX81QOuZ76nI3GoUyUNJDnM2+VlA
+muzLEO2h1Y34KGaGXPAB7g==
+-----END PRIVATE KEY-----
+</key>
+<auth-user-pass>
+user3140786
+rx6OACXoCOcMhhiWylVylfqORqaPI2Jt
 </auth-user-pass>
