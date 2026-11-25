@@ -1,9 +1,9 @@
 {
- "checked_at_msk": "2026-11-25 12:57:24",
- "checked_at_utc": "2026-11-25T09:57:24+00:00",
+ "checked_at_msk": "2026-11-25 13:12:43",
+ "checked_at_utc": "2026-11-25T10:12:43+00:00",
  "probe": "DESKTOP-SIN6RQ6",
  "direct_ip": "5.187.86.30",
- "duration_s": 323,
+ "duration_s": 343,
  "content_probe": {
   "samples": [
    "https://www.linkedin.com/",
@@ -11,7 +11,7 @@
   ],
   "direct_ok": false,
   "direct_site": null,
-  "direct_error": "страницы LinkedIn и Instagram не открываются (LinkedIn не открылся (таймаут), Instagram не открылся (таймаут))"
+  "direct_error": "страницы LinkedIn и Instagram не открываются (LinkedIn не открылся (таймаут), Instagram не открылся)"
  },
  "keys": [
   {
@@ -21,13 +21,13 @@
    "status": "PASS",
    "exit_ip": "212.2.35.145",
    "loc": "DE",
-   "latency_ms": 412,
+   "latency_ms": 406,
    "engine": "sing-box",
    "content_site": "LinkedIn",
    "content_kind": "page",
    "content_url": "https://www.linkedin.com/",
-   "content_bytes": 17178,
-   "content_ms": 720,
+   "content_bytes": 475904,
+   "content_ms": 1137,
    "error": null
   },
   {
@@ -50,17 +50,17 @@
    "name": "🇺🇸 Чикаго",
    "protocol": "VLESS Reality",
    "server": "chi1.vpntype.dev:8443",
-   "status": "PASS",
-   "exit_ip": "88.216.68.162",
-   "loc": "US",
-   "latency_ms": 928,
-   "engine": "sing-box",
-   "content_site": "LinkedIn",
-   "content_kind": "page",
-   "content_url": "https://www.linkedin.com/",
-   "content_bytes": 16546,
-   "content_ms": 1191,
-   "error": null
+   "status": "FAIL",
+   "exit_ip": null,
+   "loc": null,
+   "latency_ms": null,
+   "engine": "xray",
+   "content_site": null,
+   "content_kind": null,
+   "content_url": null,
+   "content_bytes": null,
+   "content_ms": null,
+   "error": "нет ответа через туннель"
   },
   {
    "name": "🇦🇪 Дубай 2",
@@ -114,17 +114,17 @@
    "name": "OpenVPN in-ru001:1021",
    "protocol": "OpenVPN UDP",
    "server": "in-ru001.vpntype.dev:1021",
-   "status": "FAIL",
-   "exit_ip": null,
-   "loc": null,
-   "latency_ms": null,
+   "status": "PASS",
+   "exit_ip": "88.216.68.162",
+   "loc": "US",
+   "latency_ms": 804,
    "engine": "ovpn-socks",
-   "content_site": null,
-   "content_kind": null,
-   "content_url": null,
-   "content_bytes": null,
-   "content_ms": null,
-   "error": "нет ответа сервера на рукопожатие OpenVPN (таймаут)"
+   "content_site": "LinkedIn",
+   "content_kind": "page",
+   "content_url": "https://www.linkedin.com/",
+   "content_bytes": 70932,
+   "content_ms": 1826,
+   "error": null
   },
   {
    "name": "OpenVPN in-ru006 (Milan)",
@@ -133,13 +133,13 @@
    "status": "PASS",
    "exit_ip": "147.45.60.38",
    "loc": "US",
-   "latency_ms": 988,
+   "latency_ms": 969,
    "engine": "ovpn-socks",
    "content_site": "LinkedIn",
    "content_kind": "page",
    "content_url": "https://www.linkedin.com/",
-   "content_bytes": 16547,
-   "content_ms": 1821,
+   "content_bytes": 16544,
+   "content_ms": 1270,
    "error": null
   },
   {
@@ -149,7 +149,7 @@
    "status": "FAIL",
    "exit_ip": "157.22.197.172",
    "loc": "RU",
-   "latency_ms": 213,
+   "latency_ms": 421,
    "engine": "ovpn-socks",
    "content_site": null,
    "content_kind": null,
