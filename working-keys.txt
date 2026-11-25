@@ -1,14 +1,15 @@
 # Ручки для дверей
 
 # 1. VPNTYPE 🇮🇹 Milan
-# = хороший · 8,3 Мбит/с · 554 мс
+# = хороший · 6,0 Мбит/с · 571 мс
 ss://YWVzLTI1Ni1nY206VWk0ckFhOEdvTzMzdkxmRQ==@in-ru006.vpntype.dev:8388#VPNTYPE 🇮🇹 Milan
 
 # 2. 🇺🇸 Чикаго
+# = практически непригодный · 0,7 Мбит/с · 1101 мс
 vless://ab8d5c11-2830-4583-be30-14fda11de7b6@chi1.vpntype.dev:8443?security=reality&type=tcp&flow=xtls-rprx-vision&encryption=none&sni=chi1.vpntype.dev&pbk=CW7HP_X2T37NQIYGms-bPJdPn9t1dyQuFI0ySPu4aFQ&fp=safari&sid=#🇺🇸 Чикаго
 
 # 3. OpenVPN in-ru001:1021
-# = отличный · 11 Мбит/с · 906 мс
+# = отличный · 11 Мбит/с · 902 мс
 client
 proto udp
 dev tun
@@ -105,6 +106,7 @@ ZeffY8GiPY0fA7o1Istkz7idzaKD5VSm
 </auth-user-pass>
 
 # 4. OpenVPN in-ru006 (Milan)
+# = отличный · 10 Мбит/с · 933 мс
 client
 proto udp
 dev tun
