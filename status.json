@@ -1,9 +1,9 @@
 {
- "checked_at_msk": "2026-11-25 11:41:48",
- "checked_at_utc": "2026-11-25T08:41:48+00:00",
+ "checked_at_msk": "2026-11-25 11:57:03",
+ "checked_at_utc": "2026-11-25T08:57:03+00:00",
  "probe": "DESKTOP-SIN6RQ6",
  "direct_ip": "5.187.86.30",
- "duration_s": 286,
+ "duration_s": 302,
  "content_probe": {
   "samples": [
    "https://www.linkedin.com/",
@@ -11,7 +11,7 @@
   ],
   "direct_ok": false,
   "direct_site": null,
-  "direct_error": "страницы LinkedIn и Instagram не открываются (LinkedIn не открылся, Instagram не открылся)"
+  "direct_error": "страницы LinkedIn и Instagram не открываются (LinkedIn не открылся (таймаут), Instagram не открылся (таймаут))"
  },
  "keys": [
   {
@@ -21,13 +21,13 @@
    "status": "PASS",
    "exit_ip": "212.2.35.145",
    "loc": "DE",
-   "latency_ms": 389,
+   "latency_ms": 393,
    "engine": "sing-box",
    "content_site": "LinkedIn",
    "content_kind": "page",
    "content_url": "https://www.linkedin.com/",
-   "content_bytes": 17310,
-   "content_ms": 708,
+   "content_bytes": 17318,
+   "content_ms": 754,
    "error": null
   },
   {
@@ -53,13 +53,13 @@
    "status": "PASS",
    "exit_ip": "88.216.68.162",
    "loc": "US",
-   "latency_ms": 905,
+   "latency_ms": 994,
    "engine": "sing-box",
    "content_site": "LinkedIn",
    "content_kind": "page",
    "content_url": "https://www.linkedin.com/",
-   "content_bytes": 16545,
-   "content_ms": 1191,
+   "content_bytes": 16549,
+   "content_ms": 1264,
    "error": null
   },
   {
@@ -133,13 +133,13 @@
    "status": "PASS",
    "exit_ip": "147.45.60.38",
    "loc": "US",
-   "latency_ms": 1026,
+   "latency_ms": 986,
    "engine": "ovpn-socks",
    "content_site": "LinkedIn",
    "content_kind": "page",
    "content_url": "https://www.linkedin.com/",
-   "content_bytes": 16548,
-   "content_ms": 8813,
+   "content_bytes": 491403,
+   "content_ms": 3305,
    "error": null
   },
   {
