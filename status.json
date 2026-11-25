@@ -1,9 +1,9 @@
 {
- "checked_at_msk": "2026-11-25 12:11:30",
- "checked_at_utc": "2026-11-25T09:11:30+00:00",
+ "checked_at_msk": "2026-11-25 12:26:27",
+ "checked_at_utc": "2026-11-25T09:26:27+00:00",
  "probe": "DESKTOP-SIN6RQ6",
  "direct_ip": "5.187.86.30",
- "duration_s": 270,
+ "duration_s": 266,
  "content_probe": {
   "samples": [
    "https://www.linkedin.com/",
@@ -21,13 +21,13 @@
    "status": "PASS",
    "exit_ip": "212.2.35.145",
    "loc": "DE",
-   "latency_ms": 381,
+   "latency_ms": 399,
    "engine": "sing-box",
    "content_site": "LinkedIn",
    "content_kind": "page",
    "content_url": "https://www.linkedin.com/",
-   "content_bytes": 17312,
-   "content_ms": 719,
+   "content_bytes": 17319,
+   "content_ms": 870,
    "error": null
   },
   {
@@ -53,13 +53,13 @@
    "status": "PASS",
    "exit_ip": "88.216.68.162",
    "loc": "US",
-   "latency_ms": 897,
-   "engine": "xray",
+   "latency_ms": 888,
+   "engine": "sing-box",
    "content_site": "LinkedIn",
    "content_kind": "page",
    "content_url": "https://www.linkedin.com/",
-   "content_bytes": 16544,
-   "content_ms": 1326,
+   "content_bytes": 16546,
+   "content_ms": 1208,
    "error": null
   },
   {
@@ -117,13 +117,13 @@
    "status": "PASS",
    "exit_ip": "88.216.68.162",
    "loc": "US",
-   "latency_ms": 775,
+   "latency_ms": 837,
    "engine": "ovpn-socks",
    "content_site": "LinkedIn",
    "content_kind": "page",
    "content_url": "https://www.linkedin.com/",
-   "content_bytes": 16543,
-   "content_ms": 957,
+   "content_bytes": 16546,
+   "content_ms": 1016,
    "error": null
   },
   {
@@ -133,13 +133,13 @@
    "status": "PASS",
    "exit_ip": "147.45.60.38",
    "loc": "US",
-   "latency_ms": 6009,
+   "latency_ms": 956,
    "engine": "ovpn-socks",
    "content_site": "LinkedIn",
    "content_kind": "page",
    "content_url": "https://www.linkedin.com/",
-   "content_bytes": 16543,
-   "content_ms": 6200,
+   "content_bytes": 16542,
+   "content_ms": 1188,
    "error": null
   },
   {
@@ -147,16 +147,16 @@
    "protocol": "OpenVPN UDP",
    "server": "mos5.vpntype.dev:1194",
    "status": "FAIL",
-   "exit_ip": null,
-   "loc": null,
-   "latency_ms": null,
+   "exit_ip": "157.22.197.172",
+   "loc": "RU",
+   "latency_ms": 270,
    "engine": "ovpn-socks",
    "content_site": null,
    "content_kind": null,
    "content_url": null,
    "content_bytes": null,
    "content_ms": null,
-   "error": "нет ответа сервера на рукопожатие OpenVPN (таймаут)"
+   "error": "выход в интернет есть, страница LinkedIn или Instagram не получена (LinkedIn не открылся, Instagram не открылся (таймаут))"
   }
  ]
 }
