@@ -1,9 +1,18 @@
 {
- "checked_at_msk": "2026-11-25 11:25:52",
- "checked_at_utc": "2026-11-25T08:25:52+00:00",
+ "checked_at_msk": "2026-11-25 11:32:06",
+ "checked_at_utc": "2026-11-25T08:32:06+00:00",
  "probe": "DESKTOP-SIN6RQ6",
  "direct_ip": "5.187.86.30",
- "duration_s": 231,
+ "duration_s": 271,
+ "content_probe": {
+  "samples": [
+   "https://www.linkedin.com/",
+   "https://www.instagram.com/"
+  ],
+  "direct_ok": false,
+  "direct_site": null,
+  "direct_error": "страницы LinkedIn и Instagram не открываются (LinkedIn не открылся, Instagram не открылся)"
+ },
  "keys": [
   {
    "name": "VPNTYPE 🇮🇹 Milan",
@@ -12,8 +21,13 @@
    "status": "PASS",
    "exit_ip": "212.2.35.145",
    "loc": "DE",
-   "latency_ms": 380,
+   "latency_ms": 384,
    "engine": "sing-box",
+   "content_site": "LinkedIn",
+   "content_kind": "page",
+   "content_url": "https://www.linkedin.com/",
+   "content_bytes": 17307,
+   "content_ms": 742,
    "error": null
   },
   {
@@ -25,6 +39,11 @@
    "loc": null,
    "latency_ms": null,
    "engine": "xray",
+   "content_site": null,
+   "content_kind": null,
+   "content_url": null,
+   "content_bytes": null,
+   "content_ms": null,
    "error": "сервер не принимает подключения на порт 8443 (таймаут)"
   },
   {
@@ -34,8 +53,13 @@
    "status": "PASS",
    "exit_ip": "88.216.68.162",
    "loc": "US",
-   "latency_ms": 897,
+   "latency_ms": 889,
    "engine": "sing-box",
+   "content_site": "LinkedIn",
+   "content_kind": "page",
+   "content_url": "https://www.linkedin.com/",
+   "content_bytes": 16548,
+   "content_ms": 1199,
    "error": null
   },
   {
@@ -47,6 +71,11 @@
    "loc": null,
    "latency_ms": null,
    "engine": "xray",
+   "content_site": null,
+   "content_kind": null,
+   "content_url": null,
+   "content_bytes": null,
+   "content_ms": null,
    "error": "сервер не принимает подключения на порт 8443 (таймаут)"
   },
   {
@@ -58,6 +87,11 @@
    "loc": null,
    "latency_ms": null,
    "engine": "wireproxy-awg",
+   "content_site": null,
+   "content_kind": null,
+   "content_url": null,
+   "content_bytes": null,
+   "content_ms": null,
    "error": "нет ответа сервера на рукопожатие (UDP)"
   },
   {
@@ -69,6 +103,11 @@
    "loc": null,
    "latency_ms": null,
    "engine": "wireproxy-awg",
+   "content_site": null,
+   "content_kind": null,
+   "content_url": null,
+   "content_bytes": null,
+   "content_ms": null,
    "error": "нет ответа сервера на рукопожатие (UDP)"
   },
   {
@@ -78,8 +117,13 @@
    "status": "PASS",
    "exit_ip": "88.216.68.162",
    "loc": "US",
-   "latency_ms": 794,
+   "latency_ms": 780,
    "engine": "ovpn-socks",
+   "content_site": "LinkedIn",
+   "content_kind": "page",
+   "content_url": "https://www.linkedin.com/",
+   "content_bytes": 16548,
+   "content_ms": 950,
    "error": null
   },
   {
@@ -89,8 +133,13 @@
    "status": "PASS",
    "exit_ip": "147.45.60.38",
    "loc": "US",
-   "latency_ms": 993,
+   "latency_ms": 1729,
    "engine": "ovpn-socks",
+   "content_site": "Instagram",
+   "content_kind": "page",
+   "content_url": "https://www.instagram.com/",
+   "content_bytes": 133389,
+   "content_ms": 3001,
    "error": null
   },
   {
@@ -98,11 +147,16 @@
    "protocol": "OpenVPN UDP",
    "server": "mos5.vpntype.dev:1194",
    "status": "FAIL",
-   "exit_ip": null,
-   "loc": null,
-   "latency_ms": null,
+   "exit_ip": "157.22.197.172",
+   "loc": "RU",
+   "latency_ms": 324,
    "engine": "ovpn-socks",
-   "error": "нет ответа сервера на рукопожатие OpenVPN (таймаут)"
+   "content_site": null,
+   "content_kind": null,
+   "content_url": null,
+   "content_bytes": null,
+   "content_ms": null,
+   "error": "выход в интернет есть, страница LinkedIn или Instagram не получена (LinkedIn не открылся, Instagram не открылся (таймаут))"
   }
  ]
 }
