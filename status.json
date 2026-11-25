@@ -1,9 +1,9 @@
 {
- "checked_at_msk": "2026-11-25 11:32:06",
- "checked_at_utc": "2026-11-25T08:32:06+00:00",
+ "checked_at_msk": "2026-11-25 11:41:48",
+ "checked_at_utc": "2026-11-25T08:41:48+00:00",
  "probe": "DESKTOP-SIN6RQ6",
  "direct_ip": "5.187.86.30",
- "duration_s": 271,
+ "duration_s": 286,
  "content_probe": {
   "samples": [
    "https://www.linkedin.com/",
@@ -21,13 +21,13 @@
    "status": "PASS",
    "exit_ip": "212.2.35.145",
    "loc": "DE",
-   "latency_ms": 384,
+   "latency_ms": 389,
    "engine": "sing-box",
    "content_site": "LinkedIn",
    "content_kind": "page",
    "content_url": "https://www.linkedin.com/",
-   "content_bytes": 17307,
-   "content_ms": 742,
+   "content_bytes": 17310,
+   "content_ms": 708,
    "error": null
   },
   {
@@ -53,13 +53,13 @@
    "status": "PASS",
    "exit_ip": "88.216.68.162",
    "loc": "US",
-   "latency_ms": 889,
+   "latency_ms": 905,
    "engine": "sing-box",
    "content_site": "LinkedIn",
    "content_kind": "page",
    "content_url": "https://www.linkedin.com/",
-   "content_bytes": 16548,
-   "content_ms": 1199,
+   "content_bytes": 16545,
+   "content_ms": 1191,
    "error": null
   },
   {
@@ -114,17 +114,17 @@
    "name": "OpenVPN in-ru001:1021",
    "protocol": "OpenVPN UDP",
    "server": "in-ru001.vpntype.dev:1021",
-   "status": "PASS",
-   "exit_ip": "88.216.68.162",
-   "loc": "US",
-   "latency_ms": 780,
+   "status": "FAIL",
+   "exit_ip": null,
+   "loc": null,
+   "latency_ms": null,
    "engine": "ovpn-socks",
-   "content_site": "LinkedIn",
-   "content_kind": "page",
-   "content_url": "https://www.linkedin.com/",
-   "content_bytes": 16548,
-   "content_ms": 950,
-   "error": null
+   "content_site": null,
+   "content_kind": null,
+   "content_url": null,
+   "content_bytes": null,
+   "content_ms": null,
+   "error": "нет ответа сервера на рукопожатие OpenVPN (таймаут)"
   },
   {
    "name": "OpenVPN in-ru006 (Milan)",
@@ -133,13 +133,13 @@
    "status": "PASS",
    "exit_ip": "147.45.60.38",
    "loc": "US",
-   "latency_ms": 1729,
+   "latency_ms": 1026,
    "engine": "ovpn-socks",
-   "content_site": "Instagram",
+   "content_site": "LinkedIn",
    "content_kind": "page",
-   "content_url": "https://www.instagram.com/",
-   "content_bytes": 133389,
-   "content_ms": 3001,
+   "content_url": "https://www.linkedin.com/",
+   "content_bytes": 16548,
+   "content_ms": 8813,
    "error": null
   },
   {
@@ -147,16 +147,16 @@
    "protocol": "OpenVPN UDP",
    "server": "mos5.vpntype.dev:1194",
    "status": "FAIL",
-   "exit_ip": "157.22.197.172",
-   "loc": "RU",
-   "latency_ms": 324,
+   "exit_ip": null,
+   "loc": null,
+   "latency_ms": null,
    "engine": "ovpn-socks",
    "content_site": null,
    "content_kind": null,
    "content_url": null,
    "content_bytes": null,
    "content_ms": null,
-   "error": "выход в интернет есть, страница LinkedIn или Instagram не получена (LinkedIn не открылся, Instagram не открылся (таймаут))"
+   "error": "нет ответа сервера на рукопожатие OpenVPN (таймаут)"
   }
  ]
 }
