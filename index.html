@@ -145,7 +145,8 @@ function card(k, config) {
   const [label, cls] = gradeLabel(k);
   const where = [k.protocol, k.server].filter(Boolean).join(" · ");
   const exit = k.exit_ip ? `Выход ${esc(k.exit_ip)}${k.loc ? " (" + esc(k.loc) + ")" : ""}` : "";
-  const extra = k.grade === "down" && k.next_check ? `Следующая проверка ${esc(whenNext(k.next_check))} МСК.` : "";
+  const hasNext = (k.error || "").includes("Следующая проверка");
+  const extra = k.grade === "down" && k.next_check && !hasNext ? `Следующая проверка ${whenNext(k.next_check)} МСК.` : "";
   const err = k.grade === "ok" ? "" : esc([k.error, extra].filter(Boolean).join(" "));
   const button = config
     ? `<button class="copy" type="button" data-config="${encodeURIComponent(config)}">Скопировать конфигурацию</button>`
