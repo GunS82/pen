@@ -1,19 +1,19 @@
 # Статус VPN-ключей
 
-**Последняя проверка: 25.11.2026 11:57 МСК** · работает 3 из 9 · проверка с ноутбука SIN6 (прямой IP 5.187.86.30), заняла 302 с
+**Последняя проверка: 25.11.2026 12:11 МСК** · работает 4 из 9 · проверка с ноутбука SIN6 (прямой IP 5.187.86.30), заняла 270 с
 
 С прямого канала SIN6 страницы LinkedIn и Instagram сейчас не открываются.
 
 | Ключ | Протокол | Сервер | Статус | Выход (IP, страна) | Данные | Задержка | Ошибка |
 |---|---|---|---|---|---|---|---|
-| VPNTYPE 🇮🇹 Milan | Shadowsocks | in-ru006.vpntype.dev:8388 | ✅ работает | 212.2.35.145 (DE) | LinkedIn, 17 КБ | 393 мс |  |
+| VPNTYPE 🇮🇹 Milan | Shadowsocks | in-ru006.vpntype.dev:8388 | ✅ работает | 212.2.35.145 (DE) | LinkedIn, 17 КБ | 381 мс |  |
 | 🇩🇪 Франкфурт 3 | VLESS Reality | fra3.vpntype.dev:8443 | ❌ не работает | — | — | — | сервер не принимает подключения на порт 8443 (таймаут) |
-| 🇺🇸 Чикаго | VLESS Reality | chi1.vpntype.dev:8443 | ✅ работает | 88.216.68.162 (US) | LinkedIn, 16 КБ | 994 мс |  |
+| 🇺🇸 Чикаго | VLESS Reality | chi1.vpntype.dev:8443 | ✅ работает | 88.216.68.162 (US) | LinkedIn, 16 КБ | 897 мс |  |
 | 🇦🇪 Дубай 2 | VLESS Reality | dub2.vpntype.dev:8443 | ❌ не работает | — | — | — | сервер не принимает подключения на порт 8443 (таймаут) |
 | AmneziaWG Амстердам 5 | AmneziaWG | ams5.vpntype.dev:2500 | ❌ не работает | — | — | — | нет ответа сервера на рукопожатие (UDP) |
 | AmneziaWG in-ru001 | AmneziaWG | in-ru001.vpntype.dev:2000 | ❌ не работает | — | — | — | нет ответа сервера на рукопожатие (UDP) |
-| OpenVPN in-ru001:1021 | OpenVPN UDP | in-ru001.vpntype.dev:1021 | ❌ не работает | — | — | — | нет ответа сервера на рукопожатие OpenVPN (таймаут) |
-| OpenVPN in-ru006 (Milan) | OpenVPN UDP | in-ru006.vpntype.dev:1194 | ✅ работает | 147.45.60.38 (US) | LinkedIn, 480 КБ | 986 мс |  |
+| OpenVPN in-ru001:1021 | OpenVPN UDP | in-ru001.vpntype.dev:1021 | ✅ работает | 88.216.68.162 (US) | LinkedIn, 16 КБ | 775 мс |  |
+| OpenVPN in-ru006 (Milan) | OpenVPN UDP | in-ru006.vpntype.dev:1194 | ✅ работает | 147.45.60.38 (US) | LinkedIn, 16 КБ | 6009 мс |  |
 | OpenVPN mos5 | OpenVPN UDP | mos5.vpntype.dev:1194 | ❌ не работает | — | — | — | нет ответа сервера на рукопожатие OpenVPN (таймаут) |
 
 Обновляется каждые 15 минут (задача «VPN Status Dashboard» на DESKTOP-SIN6RQ6). Хранится только последний результат, истории нет.

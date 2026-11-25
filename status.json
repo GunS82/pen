@@ -1,9 +1,9 @@
 {
- "checked_at_msk": "2026-11-25 11:57:03",
- "checked_at_utc": "2026-11-25T08:57:03+00:00",
+ "checked_at_msk": "2026-11-25 12:11:30",
+ "checked_at_utc": "2026-11-25T09:11:30+00:00",
  "probe": "DESKTOP-SIN6RQ6",
  "direct_ip": "5.187.86.30",
- "duration_s": 302,
+ "duration_s": 270,
  "content_probe": {
   "samples": [
    "https://www.linkedin.com/",
@@ -11,7 +11,7 @@
   ],
   "direct_ok": false,
   "direct_site": null,
-  "direct_error": "страницы LinkedIn и Instagram не открываются (LinkedIn не открылся (таймаут), Instagram не открылся (таймаут))"
+  "direct_error": "страницы LinkedIn и Instagram не открываются (LinkedIn не открылся, Instagram не открылся)"
  },
  "keys": [
   {
@@ -21,13 +21,13 @@
    "status": "PASS",
    "exit_ip": "212.2.35.145",
    "loc": "DE",
-   "latency_ms": 393,
+   "latency_ms": 381,
    "engine": "sing-box",
    "content_site": "LinkedIn",
    "content_kind": "page",
    "content_url": "https://www.linkedin.com/",
-   "content_bytes": 17318,
-   "content_ms": 754,
+   "content_bytes": 17312,
+   "content_ms": 719,
    "error": null
   },
   {
@@ -53,13 +53,13 @@
    "status": "PASS",
    "exit_ip": "88.216.68.162",
    "loc": "US",
-   "latency_ms": 994,
-   "engine": "sing-box",
+   "latency_ms": 897,
+   "engine": "xray",
    "content_site": "LinkedIn",
    "content_kind": "page",
    "content_url": "https://www.linkedin.com/",
-   "content_bytes": 16549,
-   "content_ms": 1264,
+   "content_bytes": 16544,
+   "content_ms": 1326,
    "error": null
   },
   {
@@ -114,17 +114,17 @@
    "name": "OpenVPN in-ru001:1021",
    "protocol": "OpenVPN UDP",
    "server": "in-ru001.vpntype.dev:1021",
-   "status": "FAIL",
-   "exit_ip": null,
-   "loc": null,
-   "latency_ms": null,
+   "status": "PASS",
+   "exit_ip": "88.216.68.162",
+   "loc": "US",
+   "latency_ms": 775,
    "engine": "ovpn-socks",
-   "content_site": null,
-   "content_kind": null,
-   "content_url": null,
-   "content_bytes": null,
-   "content_ms": null,
-   "error": "нет ответа сервера на рукопожатие OpenVPN (таймаут)"
+   "content_site": "LinkedIn",
+   "content_kind": "page",
+   "content_url": "https://www.linkedin.com/",
+   "content_bytes": 16543,
+   "content_ms": 957,
+   "error": null
   },
   {
    "name": "OpenVPN in-ru006 (Milan)",
@@ -133,13 +133,13 @@
    "status": "PASS",
    "exit_ip": "147.45.60.38",
    "loc": "US",
-   "latency_ms": 986,
+   "latency_ms": 6009,
    "engine": "ovpn-socks",
    "content_site": "LinkedIn",
    "content_kind": "page",
    "content_url": "https://www.linkedin.com/",
-   "content_bytes": 491403,
-   "content_ms": 3305,
+   "content_bytes": 16543,
+   "content_ms": 6200,
    "error": null
   },
   {
