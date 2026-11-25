@@ -1,9 +1,16 @@
 {
- "checked_at_msk": "2026-11-25 13:41:58",
- "checked_at_utc": "2026-11-25T10:41:58+00:00",
+ "checked_at_msk": "2026-11-25 13:48:00",
+ "checked_at_utc": "2026-11-25T10:48:00+00:00",
  "probe": "DESKTOP-SIN6RQ6",
  "direct_ip": "5.187.86.30",
- "duration_s": 297,
+ "duration_s": 344,
+ "internet": {
+  "ok": true,
+  "url": "https://www.google.com/",
+  "http": 200,
+  "ms": 566,
+  "error": null
+ },
  "content_probe": {
   "samples": [
    "https://www.linkedin.com/",
@@ -13,6 +20,14 @@
   "direct_site": null,
   "direct_error": "страницы LinkedIn и Instagram не открываются (LinkedIn не открылся (таймаут), Instagram не открылся (таймаут))"
  },
+ "grades": {
+  "ok": 3,
+  "question": 6,
+  "down": 0,
+  "down_after": 4,
+  "daily_hours": 24
+ },
+ "internet_skipped": false,
  "working_keys_file": "working-keys.txt",
  "keys": [
   {
@@ -22,14 +37,18 @@
    "status": "PASS",
    "exit_ip": "212.2.35.145",
    "loc": "DE",
-   "latency_ms": 402,
+   "latency_ms": 408,
    "engine": "sing-box",
    "content_site": "LinkedIn",
    "content_kind": "page",
    "content_url": "https://www.linkedin.com/",
-   "content_bytes": 17319,
-   "content_ms": 667,
-   "error": null
+   "content_bytes": 17311,
+   "content_ms": 733,
+   "error": null,
+   "grade": "ok",
+   "fail_streak": 0,
+   "next_check": null,
+   "checked_now": true
   },
   {
    "name": "🇩🇪 Франкфурт 3",
@@ -45,7 +64,11 @@
    "content_url": null,
    "content_bytes": null,
    "content_ms": null,
-   "error": "сервер не принимает подключения на порт 8443 (таймаут)"
+   "error": "сервер не принимает подключения на порт 8443 (таймаут)",
+   "grade": "question",
+   "fail_streak": 1,
+   "next_check": null,
+   "checked_now": true
   },
   {
    "name": "🇺🇸 Чикаго",
@@ -54,14 +77,18 @@
    "status": "PASS",
    "exit_ip": "88.216.68.162",
    "loc": "US",
-   "latency_ms": 903,
+   "latency_ms": 1005,
    "engine": "sing-box",
    "content_site": "LinkedIn",
    "content_kind": "page",
    "content_url": "https://www.linkedin.com/",
-   "content_bytes": 491513,
-   "content_ms": 1914,
-   "error": null
+   "content_bytes": 16548,
+   "content_ms": 6265,
+   "error": null,
+   "grade": "ok",
+   "fail_streak": 0,
+   "next_check": null,
+   "checked_now": true
   },
   {
    "name": "🇦🇪 Дубай 2",
@@ -77,7 +104,11 @@
    "content_url": null,
    "content_bytes": null,
    "content_ms": null,
-   "error": "сервер не принимает подключения на порт 8443 (таймаут)"
+   "error": "сервер не принимает подключения на порт 8443 (таймаут)",
+   "grade": "question",
+   "fail_streak": 1,
+   "next_check": null,
+   "checked_now": true
   },
   {
    "name": "AmneziaWG Амстердам 5",
@@ -93,7 +124,11 @@
    "content_url": null,
    "content_bytes": null,
    "content_ms": null,
-   "error": "нет ответа сервера на рукопожатие (UDP)"
+   "error": "нет ответа сервера на рукопожатие (UDP)",
+   "grade": "question",
+   "fail_streak": 1,
+   "next_check": null,
+   "checked_now": true
   },
   {
    "name": "AmneziaWG in-ru001",
@@ -109,23 +144,31 @@
    "content_url": null,
    "content_bytes": null,
    "content_ms": null,
-   "error": "нет ответа сервера на рукопожатие (UDP)"
+   "error": "нет ответа сервера на рукопожатие (UDP)",
+   "grade": "question",
+   "fail_streak": 1,
+   "next_check": null,
+   "checked_now": true
   },
   {
    "name": "OpenVPN in-ru001:1021",
    "protocol": "OpenVPN UDP",
    "server": "in-ru001.vpntype.dev:1021",
-   "status": "PASS",
-   "exit_ip": "88.216.68.162",
-   "loc": "US",
-   "latency_ms": 792,
+   "status": "FAIL",
+   "exit_ip": null,
+   "loc": null,
+   "latency_ms": null,
    "engine": "ovpn-socks",
-   "content_site": "LinkedIn",
-   "content_kind": "page",
-   "content_url": "https://www.linkedin.com/",
-   "content_bytes": 16547,
-   "content_ms": 1036,
-   "error": null
+   "content_site": null,
+   "content_kind": null,
+   "content_url": null,
+   "content_bytes": null,
+   "content_ms": null,
+   "error": "нет ответа сервера на рукопожатие OpenVPN (таймаут)",
+   "grade": "question",
+   "fail_streak": 1,
+   "next_check": null,
+   "checked_now": true
   },
   {
    "name": "OpenVPN in-ru006 (Milan)",
@@ -134,14 +177,18 @@
    "status": "PASS",
    "exit_ip": "147.45.60.38",
    "loc": "US",
-   "latency_ms": 1538,
+   "latency_ms": 1061,
    "engine": "ovpn-socks",
    "content_site": "LinkedIn",
    "content_kind": "page",
    "content_url": "https://www.linkedin.com/",
-   "content_bytes": 491570,
-   "content_ms": 6770,
-   "error": null
+   "content_bytes": 16542,
+   "content_ms": 1143,
+   "error": null,
+   "grade": "ok",
+   "fail_streak": 0,
+   "next_check": null,
+   "checked_now": true
   },
   {
    "name": "OpenVPN mos5",
@@ -150,14 +197,18 @@
    "status": "FAIL",
    "exit_ip": "157.22.197.172",
    "loc": "RU",
-   "latency_ms": 252,
+   "latency_ms": 256,
    "engine": "ovpn-socks",
    "content_site": null,
    "content_kind": null,
    "content_url": null,
    "content_bytes": null,
    "content_ms": null,
-   "error": "выход в интернет есть, страница LinkedIn или Instagram не получена (LinkedIn не открылся, Instagram не открылся (таймаут))"
+   "error": "выход в интернет есть, страница LinkedIn или Instagram не получена (LinkedIn не открылся, Instagram не открылся (таймаут))",
+   "grade": "question",
+   "fail_streak": 1,
+   "next_check": null,
+   "checked_now": true
   }
  ]
 }
