@@ -33,6 +33,7 @@
     margin: 0 0 .7rem;
   }
   .card h3 { margin: 0; font-size: 1.08rem; }
+  .note { color: var(--muted); margin: .35rem 0 0; font-size: .95rem; }
   button.copy {
     display: block;
     width: 100%;
@@ -88,14 +89,18 @@ function parseWorking(text) {
     const m = line.match(/^# (\d+)\. (.+)$/);
     if (m) {
       if (cur) blocks.push(cur);
-      cur = { name: m[2].trim(), body: [] };
+      cur = { name: m[2].trim(), note: "", body: [] };
+      continue;
+    }
+    if (cur && line.startsWith("# = ")) {
+      cur.note = line.slice(4).trim();
       continue;
     }
     if (cur) cur.body.push(line);
   }
   if (cur) blocks.push(cur);
   return blocks
-    .map((b) => ({ name: b.name, config: b.body.join("\n").trim() }))
+    .map((b) => ({ name: b.name, note: b.note || "", config: b.body.join("\n").trim() }))
     .filter((b) => b.config);
 }
 
@@ -141,7 +146,7 @@ async function load() {
   if (!res.ok) throw new Error(String(res.status));
   const items = parseWorking(await res.text());
   $("list").innerHTML = items.length
-    ? items.map((item) => `<article class="card"><h3>${esc(item.name)}</h3><button class="copy" type="button" data-config="${encodeURIComponent(item.config)}">Скопировать конфигурацию</button></article>`).join("")
+    ? items.map((item) => `<article class="card"><h3>${esc(item.name)}</h3>${item.note ? `<p class="note">${esc(item.note)}</p>` : ""}<button class="copy" type="button" data-config="${encodeURIComponent(item.config)}">Скопировать конфигурацию</button></article>`).join("")
     : `<p class="empty">Пока пусто.</p>`;
 }
 
