@@ -1,9 +1,9 @@
 {
- "checked_at_msk": "2026-11-25 09:56:28",
- "checked_at_utc": "2026-11-25T06:56:28+00:00",
+ "checked_at_msk": "2026-11-25 10:10:56",
+ "checked_at_utc": "2026-11-25T07:10:56+00:00",
  "probe": "DESKTOP-SIN6RQ6",
  "direct_ip": "5.187.86.30",
- "duration_s": 267,
+ "duration_s": 235,
  "keys": [
   {
    "name": "VPNTYPE 🇮🇹 Milan",
@@ -12,7 +12,7 @@
    "status": "PASS",
    "exit_ip": "212.2.35.145",
    "loc": "DE",
-   "latency_ms": 389,
+   "latency_ms": 388,
    "engine": "sing-box",
    "error": null
   },
@@ -34,7 +34,7 @@
    "status": "PASS",
    "exit_ip": "88.216.68.162",
    "loc": "US",
-   "latency_ms": 891,
+   "latency_ms": 907,
    "engine": "sing-box",
    "error": null
   },
@@ -75,34 +75,34 @@
    "name": "OpenVPN in-ru001:1021",
    "protocol": "OpenVPN UDP",
    "server": "in-ru001.vpntype.dev:1021",
-   "status": "FAIL",
-   "exit_ip": null,
-   "loc": null,
-   "latency_ms": null,
+   "status": "PASS",
+   "exit_ip": "88.216.68.162",
+   "loc": "US",
+   "latency_ms": 794,
    "engine": "ovpn-socks",
-   "error": "нет ответа сервера на рукопожатие OpenVPN (таймаут)"
+   "error": null
   },
   {
    "name": "OpenVPN in-ru006 (Milan)",
    "protocol": "OpenVPN UDP",
    "server": "in-ru006.vpntype.dev:1194",
+   "status": "PASS",
+   "exit_ip": "147.45.60.38",
+   "loc": "US",
+   "latency_ms": 982,
+   "engine": "ovpn-socks",
+   "error": null
+  },
+  {
+   "name": "OpenVPN mos5",
+   "protocol": "OpenVPN UDP",
+   "server": "mos5.vpntype.dev:1194",
    "status": "FAIL",
    "exit_ip": null,
    "loc": null,
    "latency_ms": null,
    "engine": "ovpn-socks",
    "error": "нет ответа сервера на рукопожатие OpenVPN (таймаут)"
-  },
-  {
-   "name": "OpenVPN mos5",
-   "protocol": "OpenVPN UDP",
-   "server": "mos5.vpntype.dev:1194",
-   "status": "PASS",
-   "exit_ip": "157.22.197.172",
-   "loc": "RU",
-   "latency_ms": 361,
-   "engine": "ovpn-socks",
-   "error": null
   }
  ]
 }
