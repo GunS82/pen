@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f3efe6">
+<title>Ключи VPN</title>
+<style>
+  :root {
+    --bg: #f3efe6;
+    --ink: #1d1a16;
+    --muted: #6f675c;
+    --card: #fffdf8;
+    --line: #e4dccf;
+    --ok: #1c6b45;
+    --ok-bg: #e5f4eb;
+    --down: #8a5a2a;
+    --down-bg: #f6eee4;
+    --ask: #6a5420;
+    --ask-bg: #f8f1d8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 17px/1.45 "Segoe UI", system-ui, sans-serif;
+  }
+  main { max-width: 40rem; margin: 0 auto; padding: 1.4rem 1rem 5rem; }
+  h1 { font-size: 1.7rem; font-weight: 650; margin: 0 0 .35rem; letter-spacing: -.02em; }
+  .sub, .hint { color: var(--muted); margin: 0 0 .9rem; }
+  h2 { font-size: 1rem; font-weight: 650; margin: 1.4rem 0 .6rem; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: .9rem 1rem 1rem;
+    margin: 0 0 .7rem;
+  }
+  .card h3 { margin: 0 0 .25rem; font-size: 1.08rem; }
+  .meta { color: var(--muted); font-size: .92rem; margin: 0; }
+  .err { color: var(--down); font-size: .92rem; margin: .45rem 0 0; }
+  button.copy {
+    display: block;
+    width: 100%;
+    margin-top: .75rem;
+    border: 0;
+    border-radius: 10px;
+    background: var(--ok);
+    color: #fff;
+    font: inherit;
+    font-weight: 650;
+    padding: .75rem .9rem;
+    cursor: pointer;
+  }
+  button.copy:active { transform: translateY(1px); }
+  button.copy.done { background: #143d2c; }
+  .pill {
+    display: inline-block;
+    font-size: .78rem;
+    font-weight: 650;
+    border-radius: 999px;
+    padding: .12rem .5rem;
+    margin-bottom: .4rem;
+  }
+  .ok { color: var(--ok); background: var(--ok-bg); }
+  .down { color: var(--down); background: var(--down-bg); }
+  .ask { color: var(--ask); background: var(--ask-bg); }
+  #toast {
+    position: fixed;
+    left: 50%;
+    bottom: 1.2rem;
+    transform: translateX(-50%) translateY(1rem);
+    background: #1d1a16;
+    color: #fff;
+    padding: .7rem 1rem;
+    border-radius: 999px;
+    opacity: 0;
+    pointer-events: none;
+    transition: .2s ease;
+    max-width: calc(100% - 2rem);
+    text-align: center;
+  }
+  #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  .empty { color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Ключи VPN</h1>
+  <p class="sub" id="when">Загрузка…</p>
+  <p class="hint">Нажмите на рабочий ключ: его конфигурация попадёт в буфер. Вставьте её в VPN-клиент.</p>
+  <section id="live"></section>
+  <section id="rest"></section>
+</main>
+<div id="toast" role="status"></div>
+<script>
+const $ = (id) => document.getElementById(id);
+
+function esc(s) {
+  return String(s ?? "").replace(/[&<>"']/g, (c) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[c]));
+}
+
+function parseWorking(text) {
+  const blocks = [];
+  let cur = null;
+  for (const line of text.replace(/\r\n/g, "\n").split("\n")) {
+    const m = line.match(/^# (\d+)\. (.+)$/);
+    if (m) {
+      if (cur) blocks.push(cur);
+      cur = { name: m[2].trim(), meta: "", body: [] };
+      continue;
+    }
+    if (!cur) continue;
+    if (!cur.meta && line.startsWith("# ")) {
+      cur.meta = line.slice(2).trim();
+      continue;
+    }
+    cur.body.push(line);
+  }
+  if (cur) blocks.push(cur);
+  return blocks.map((b) => ({ name: b.name, config: b.body.join("\n").trim() }))
+    .filter((b) => b.config);
+}
+
+function gradeLabel(k) {
+  if (k.grade === "ok") return ["Работает", "ok"];
+  if (k.grade === "question") return [`Под вопросом, ${k.fail_streak || 1} из 4`, "ask"];
+  if (k.grade === "down") return ["Недоступен", "down"];
+  if (k.status === "N/A" || k.grade === "na") return ["Не поддерживается", "ask"];
+  return ["Нет данных", "ask"];
+}
+
+function whenNext(iso) {
+  if (!iso) return "";
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return "";
+  const p = (n) => String(n).padStart(2, "0");
+  return `${p(d.getDate())}.${p(d.getMonth() + 1)} ${p(d.getHours())}:${p(d.getMinutes())}`;
+}
+
+function card(k, config) {
+  const [label, cls] = gradeLabel(k);
+  const where = [k.protocol, k.server].filter(Boolean).join(" · ");
+  const exit = k.exit_ip ? `Выход ${esc(k.exit_ip)}${k.loc ? " (" + esc(k.loc) + ")" : ""}` : "";
+  const extra = k.grade === "down" && k.next_check ? `Следующая проверка ${esc(whenNext(k.next_check))} МСК.` : "";
+  const err = k.grade === "ok" ? "" : esc([k.error, extra].filter(Boolean).join(" "));
+  const button = config
+    ? `<button class="copy" type="button" data-config="${encodeURIComponent(config)}">Скопировать конфигурацию</button>`
+    : (k.grade === "ok" ? `<p class="err">Конфигурация для копирования не найдена.</p>` : "");
+  return `<article class="card">
+    <div class="pill ${cls}">${esc(label)}</div>
+    <h3>${esc(k.name)}</h3>
+    <p class="meta">${esc(where)}${exit ? "<br>" + exit : ""}</p>
+    ${err ? `<p class="err">${err}</p>` : ""}
+    ${button}
+  </article>`;
+}
+
+function toast(text) {
+  const el = $("toast");
+  el.textContent = text;
+  el.classList.add("show");
+  clearTimeout(toast._t);
+  toast._t = setTimeout(() => el.classList.remove("show"), 2200);
+}
+
+async function copyText(text, button) {
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch {
+    const area = document.createElement("textarea");
+    area.value = text;
+    area.setAttribute("readonly", "");
+    area.style.position = "fixed";
+    area.style.left = "-9999px";
+    document.body.appendChild(area);
+    area.select();
+    document.execCommand("copy");
+    area.remove();
+  }
+  button.textContent = "Скопировано";
+  button.classList.add("done");
+  toast("Скопировано. Вставьте в VPN-клиент.");
+  setTimeout(() => {
+    button.textContent = "Скопировать конфигурацию";
+    button.classList.remove("done");
+  }, 1800);
+}
+
+document.addEventListener("click", (event) => {
+  const button = event.target.closest("button.copy");
+  if (!button) return;
+  copyText(decodeURIComponent(button.dataset.config), button);
+});
+
+async function load() {
+  const stamp = Date.now();
+  const [statusRes, keysRes] = await Promise.all([
+    fetch("status.json?t=" + stamp, { cache: "no-store" }),
+    fetch("working-keys.txt?t=" + stamp, { cache: "no-store" })
+  ]);
+  if (!statusRes.ok) throw new Error("status " + statusRes.status);
+  const status = await statusRes.json();
+  const configs = keysRes.ok ? parseWorking(await keysRes.text()) : [];
+  const byName = new Map(configs.map((c) => [c.name, c.config]));
+  const net = status.internet || {};
+  const netLine = net.ok ? "Интернет на проверке есть." : "Интернет на момент проверки не подтверждён.";
+  $("when").textContent = `Проверка ${status.checked_at_msk || "—"} МСК. ${netLine}`;
+  const keys = status.keys || [];
+  const live = keys.filter((k) => k.grade === "ok");
+  const rest = keys.filter((k) => k.grade !== "ok");
+  $("live").innerHTML = `<h2>Можно пользоваться, ${live.length}</h2>` + (
+    live.length
+      ? live.map((k) => card(k, byName.get(k.name) || "")).join("")
+      : `<p class="empty">Сейчас нет ключей, которые прошли проверку.</p>`
+  );
+  $("rest").innerHTML = rest.length
+    ? `<h2>Сейчас не работают, ${rest.length}</h2>` + rest.map((k) => card(k, "")).join("")
+    : "";
+}
+
+load().catch((err) => {
+  $("when").textContent = "Не удалось загрузить статус. Обновите страницу.";
+  console.error(err);
+});
+</script>
+</body>
+</html>
