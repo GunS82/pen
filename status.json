@@ -1,14 +1,14 @@
 {
- "checked_at_msk": "2026-11-25 14:26:32",
- "checked_at_utc": "2026-11-25T11:26:32+00:00",
+ "checked_at_msk": "2026-11-25 14:38:32",
+ "checked_at_utc": "2026-11-25T11:38:32+00:00",
  "probe": "DESKTOP-SIN6RQ6",
  "direct_ip": "5.187.86.30",
- "duration_s": 271,
+ "duration_s": 91,
  "internet": {
   "ok": true,
   "url": "https://www.google.com/",
   "http": 200,
-  "ms": 549,
+  "ms": 644,
   "error": null
  },
  "content_probe": {
@@ -21,8 +21,8 @@
   "direct_error": "страницы LinkedIn и Instagram не открываются (LinkedIn не открылся (таймаут), Instagram не открылся (таймаут))"
  },
  "grades": {
-  "ok": 4,
-  "question": 0,
+  "ok": 3,
+  "question": 1,
   "down": 5,
   "down_after": 4,
   "daily_hours": 24
@@ -37,13 +37,13 @@
    "status": "PASS",
    "exit_ip": "212.2.35.145",
    "loc": "DE",
-   "latency_ms": 403,
+   "latency_ms": 442,
    "engine": "sing-box",
    "content_site": "LinkedIn",
    "content_kind": "page",
    "content_url": "https://www.linkedin.com/",
-   "content_bytes": 17307,
-   "content_ms": 745,
+   "content_bytes": 475572,
+   "content_ms": 1152,
    "error": null,
    "grade": "ok",
    "fail_streak": 0,
@@ -68,7 +68,7 @@
    "grade": "down",
    "fail_streak": 4,
    "next_check": "2026-11-26T14:22:33+03:00",
-   "checked_now": true
+   "checked_now": false
   },
   {
    "name": "🇺🇸 Чикаго",
@@ -77,13 +77,13 @@
    "status": "PASS",
    "exit_ip": "88.216.68.162",
    "loc": "US",
-   "latency_ms": 896,
+   "latency_ms": 991,
    "engine": "sing-box",
    "content_site": "LinkedIn",
    "content_kind": "page",
    "content_url": "https://www.linkedin.com/",
-   "content_bytes": 491414,
-   "content_ms": 1867,
+   "content_bytes": 491550,
+   "content_ms": 2140,
    "error": null,
    "grade": "ok",
    "fail_streak": 0,
@@ -108,7 +108,7 @@
    "grade": "down",
    "fail_streak": 4,
    "next_check": "2026-11-26T14:23:49+03:00",
-   "checked_now": true
+   "checked_now": false
   },
   {
    "name": "AmneziaWG Амстердам 5",
@@ -128,7 +128,7 @@
    "grade": "down",
    "fail_streak": 4,
    "next_check": "2026-11-26T14:24:51+03:00",
-   "checked_now": true
+   "checked_now": false
   },
   {
    "name": "AmneziaWG in-ru001",
@@ -148,25 +148,25 @@
    "grade": "down",
    "fail_streak": 4,
    "next_check": "2026-11-26T14:25:16+03:00",
-   "checked_now": true
+   "checked_now": false
   },
   {
    "name": "OpenVPN in-ru001:1021",
    "protocol": "OpenVPN UDP",
    "server": "in-ru001.vpntype.dev:1021",
-   "status": "PASS",
-   "exit_ip": "88.216.68.162",
-   "loc": "US",
-   "latency_ms": 779,
+   "status": "FAIL",
+   "exit_ip": null,
+   "loc": null,
+   "latency_ms": null,
    "engine": "ovpn-socks",
-   "content_site": "LinkedIn",
-   "content_kind": "page",
-   "content_url": "https://www.linkedin.com/",
-   "content_bytes": 16548,
-   "content_ms": 949,
-   "error": null,
-   "grade": "ok",
-   "fail_streak": 0,
+   "content_site": null,
+   "content_kind": null,
+   "content_url": null,
+   "content_bytes": null,
+   "content_ms": null,
+   "error": "нет ответа сервера на рукопожатие OpenVPN (таймаут)",
+   "grade": "question",
+   "fail_streak": 1,
    "next_check": null,
    "checked_now": true
   },
@@ -177,13 +177,13 @@
    "status": "PASS",
    "exit_ip": "147.45.60.38",
    "loc": "US",
-   "latency_ms": 963,
+   "latency_ms": 2039,
    "engine": "ovpn-socks",
    "content_site": "LinkedIn",
    "content_kind": "page",
    "content_url": "https://www.linkedin.com/",
-   "content_bytes": 16549,
-   "content_ms": 2169,
+   "content_bytes": 16551,
+   "content_ms": 1121,
    "error": null,
    "grade": "ok",
    "fail_streak": 0,
@@ -208,7 +208,7 @@
    "grade": "down",
    "fail_streak": 4,
    "next_check": "2026-11-26T14:25:51+03:00",
-   "checked_now": true
+   "checked_now": false
   }
  ]
 }
