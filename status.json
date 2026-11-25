@@ -1,9 +1,9 @@
 {
- "checked_at_msk": "2026-11-25 13:12:43",
- "checked_at_utc": "2026-11-25T10:12:43+00:00",
+ "checked_at_msk": "2026-11-25 13:20:00",
+ "checked_at_utc": "2026-11-25T10:20:00+00:00",
  "probe": "DESKTOP-SIN6RQ6",
  "direct_ip": "5.187.86.30",
- "duration_s": 343,
+ "duration_s": 338,
  "content_probe": {
   "samples": [
    "https://www.linkedin.com/",
@@ -11,8 +11,9 @@
   ],
   "direct_ok": false,
   "direct_site": null,
-  "direct_error": "страницы LinkedIn и Instagram не открываются (LinkedIn не открылся (таймаут), Instagram не открылся)"
+  "direct_error": "страницы LinkedIn и Instagram не открываются (LinkedIn не открылся, Instagram не открылся)"
  },
+ "working_keys_file": "working-keys.txt",
  "keys": [
   {
    "name": "VPNTYPE 🇮🇹 Milan",
@@ -21,13 +22,13 @@
    "status": "PASS",
    "exit_ip": "212.2.35.145",
    "loc": "DE",
-   "latency_ms": 406,
+   "latency_ms": 386,
    "engine": "sing-box",
    "content_site": "LinkedIn",
    "content_kind": "page",
    "content_url": "https://www.linkedin.com/",
-   "content_bytes": 475904,
-   "content_ms": 1137,
+   "content_bytes": 17305,
+   "content_ms": 834,
    "error": null
   },
   {
@@ -117,13 +118,13 @@
    "status": "PASS",
    "exit_ip": "88.216.68.162",
    "loc": "US",
-   "latency_ms": 804,
+   "latency_ms": 794,
    "engine": "ovpn-socks",
    "content_site": "LinkedIn",
    "content_kind": "page",
    "content_url": "https://www.linkedin.com/",
-   "content_bytes": 70932,
-   "content_ms": 1826,
+   "content_bytes": 16543,
+   "content_ms": 956,
    "error": null
   },
   {
@@ -133,13 +134,13 @@
    "status": "PASS",
    "exit_ip": "147.45.60.38",
    "loc": "US",
-   "latency_ms": 969,
+   "latency_ms": 977,
    "engine": "ovpn-socks",
    "content_site": "LinkedIn",
    "content_kind": "page",
    "content_url": "https://www.linkedin.com/",
-   "content_bytes": 16544,
-   "content_ms": 1270,
+   "content_bytes": 491535,
+   "content_ms": 2582,
    "error": null
   },
   {
@@ -149,7 +150,7 @@
    "status": "FAIL",
    "exit_ip": "157.22.197.172",
    "loc": "RU",
-   "latency_ms": 421,
+   "latency_ms": 353,
    "engine": "ovpn-socks",
    "content_site": null,
    "content_kind": null,
