@@ -1,7 +1,7 @@
 # Ручки для дверей
 
 # 1. 🟪 🇷🇺 Мадрид _ar8x_
-# = отличный · 12 Мбит/с · 673 мс
+# = отличный · 12 Мбит/с · 540 мс
 #profile-title: base64:8J+fqiDwn4e38J+HuiDQnNCw0LTRgNC40LQgX2FyOHhf
 [Interface]
 PrivateKey = EENmvwge/7ZP+8l9PsUsmd+W4UUjygY5YtEwApkyz1E=
@@ -24,7 +24,7 @@ AllowedIPs = 0.0.0.0/0
 PersistentKeepalive = 20
 
 # 2. 🔒 🇺🇸 OpenVPN in-ru001:1021 _nvae_
-# = отличный · 11 Мбит/с · 769 мс
+# = отличный · 11 Мбит/с · 749 мс
 #profile-title: base64:8J+UkiDwn4e68J+HuCBPcGVuVlBOIGluLXJ1MDAxOjEwMjEgX252YWVf
 client
 proto udp
@@ -122,7 +122,7 @@ ZeffY8GiPY0fA7o1Istkz7idzaKD5VSm
 </auth-user-pass>
 
 # 3. 🔒 🇺🇸 OpenVPN in-ru001:1194 _djgx_
-# = отличный · 11 Мбит/с · 986 мс
+# = отличный · 11 Мбит/с · 979 мс
 #profile-title: base64:8J+UkiDwn4e68J+HuCBPcGVuVlBOIGluLXJ1MDAxOjExOTQgX2RqZ3hf
 client
 proto udp
@@ -225,7 +225,7 @@ AKk4rDhrltBbelUxMuIgwYDxITm80u7q
 </auth-user-pass>
 
 # 4. 🔒 🇨🇦 OpenVPN in-ru004:5050 _chsc_
-# = отличный · 11 Мбит/с · 987 мс
+# = отличный · 11 Мбит/с · 991 мс
 #profile-title: base64:8J+UkiDwn4eo8J+HpiBPcGVuVlBOIGluLXJ1MDA0OjUwNTAgX2Noc2Nf
 client
 proto udp
@@ -324,7 +324,7 @@ Qd6eFazihFOrFGj882sG35cYphzE44MW
 </auth-user-pass>
 
 # 5. 🔒 🇷🇺 OpenVPN in-ru006 (Milan) _82t3_
-# = отличный · 10 Мбит/с · 981 мс
+# = отличный · 11 Мбит/с · 975 мс
 #profile-title: base64:8J+UkiDwn4e38J+HuiBPcGVuVlBOIGluLXJ1MDA2IChNaWxhbikgXzgydDNf
 client
 proto udp
@@ -424,8 +424,13 @@ user3140786
 rx6OACXoCOcMhhiWylVylfqORqaPI2Jt
 </auth-user-pass>
 
-# 6. 🟪 🇸🇪 Стокгольм _q47x_
-# = хороший · 10,0 Мбит/с · 4048 мс
+# 6. 🕶️ 🇮🇷 VPNTYPE Milan _52sy_
+# = отличный · 10 Мбит/с · 372 мс
+#profile-title: base64:8J+Vtu+4jyDwn4eu8J+HtyBWUE5UWVBFIE1pbGFuIF81MnN5Xw==
+ss://YWVzLTI1Ni1nY206VWk0ckFhOEdvTzMzdkxmRQ==@in-ru006.vpntype.dev:8388#%F0%9F%95%B6%EF%B8%8F%20%F0%9F%87%AE%F0%9F%87%B7%20VPNTYPE%20Milan%20_52sy_
+
+# 7. 🟪 🇸🇪 Стокгольм _q47x_
+# = отличный · 10 Мбит/с · 4011 мс
 #profile-title: base64:8J+fqiDwn4e48J+HqiDQodGC0L7QutCz0L7Qu9GM0LwgX3E0N3hf
 [Interface]
 PrivateKey = 6HPuoj4tQ2XJQ4OwNg9tx1cFemJKuvzGkiyiht1CkG8=
@@ -449,8 +454,8 @@ Endpoint = sto1.vpntype.dev:4000
 AllowedIPs = 0.0.0.0/0
 PersistentKeepalive = 20
 
-# 7. 🔒 🇮🇱 OpenVPN in-ru001:5555 TCP _zbqg_
-# = хороший · 9,5 Мбит/с · 856 мс
+# 8. 🔒 🇮🇱 OpenVPN in-ru001:5555 TCP _zbqg_
+# = хороший · 9,4 Мбит/с · 780 мс
 #profile-title: base64:8J+UkiDwn4eu8J+HsSBPcGVuVlBOIGluLXJ1MDAxOjU1NTUgVENQIF96YnFnXw==
 client
 proto tcp
@@ -548,13 +553,8 @@ user3140786
 4Bfm3FJAHCX35GDJZdhHhdIwcEtDmEQI
 </auth-user-pass>
 
-# 8. 🕶️ 🇮🇷 VPNTYPE Milan _52sy_
-# = хороший · 8,0 Мбит/с · 354 мс
-#profile-title: base64:8J+Vtu+4jyDwn4eu8J+HtyBWUE5UWVBFIE1pbGFuIF81MnN5Xw==
-ss://YWVzLTI1Ni1nY206VWk0ckFhOEdvTzMzdkxmRQ==@in-ru006.vpntype.dev:8388#%F0%9F%95%B6%EF%B8%8F%20%F0%9F%87%AE%F0%9F%87%B7%20VPNTYPE%20Milan%20_52sy_
-
 # 9. 🔒 🇷🇺 OpenVPN in-ru008:3003 _5p29_
-# = медленный · 2,8 Мбит/с · 614 мс
+# = приемлемый · 3,5 Мбит/с · 363 мс
 #profile-title: base64:8J+UkiDwn4e38J+HuiBPcGVuVlBOIGluLXJ1MDA4OjMwMDMgXzVwMjlf
 client
 proto udp
