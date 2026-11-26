@@ -22,7 +22,7 @@ Endpoint = mad1.vpntype.dev:5555
 AllowedIPs = 0.0.0.0/0
 PersistentKeepalive = 20
 
-# 2. 🔒 🇺🇸 OpenVPN in-ru001:1021
+# 2. 🔒 OpenVPN in-ru001:1021
 # = отличный · 11 Мбит/с · 925 мс
 client
 proto udp
@@ -119,7 +119,7 @@ user3140786
 ZeffY8GiPY0fA7o1Istkz7idzaKD5VSm
 </auth-user-pass>
 
-# 3. 🔒 🇮🇳 OpenVPN in-ru004:5050
+# 3. 🔒 OpenVPN in-ru004:5050
 # = отличный · 11 Мбит/с · 1198 мс
 client
 proto udp
@@ -217,7 +217,7 @@ user3140786
 Qd6eFazihFOrFGj882sG35cYphzE44MW
 </auth-user-pass>
 
-# 4. 🔒 🇺🇸 OpenVPN in-ru001:1194
+# 4. 🔒 OpenVPN in-ru001:1194
 # = отличный · 11 Мбит/с · 1040 мс
 client
 proto udp
@@ -447,7 +447,7 @@ user3140786
 rx6OACXoCOcMhhiWylVylfqORqaPI2Jt
 </auth-user-pass>
 
-# 8. 🔒 🇫🇮 OpenVPN in-ru008:3003
+# 8. 🔒 OpenVPN in-ru008:3003
 # = медленный · 2,2 Мбит/с · 507 мс
 client
 proto udp
