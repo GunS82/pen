@@ -1,7 +1,7 @@
 # Ручки для дверей
 
 # 1. 🔒 🇺🇸 OpenVPN in-ru001:1194 _djgx_
-# = отличный · 11 Мбит/с · 1014 мс
+# = отличный · 11 Мбит/с · 925 мс
 #profile-title: base64:8J+UkiDwn4e68J+HuCBPcGVuVlBOIGluLXJ1MDAxOjExOTQgX2RqZ3hf
 client
 proto udp
@@ -104,7 +104,7 @@ AKk4rDhrltBbelUxMuIgwYDxITm80u7q
 </auth-user-pass>
 
 # 2. 🟪 🇸🇪 Стокгольм _q47x_
-# = отличный · 11 Мбит/с · 4537 мс
+# = отличный · 11 Мбит/с · 3985 мс
 #profile-title: base64:8J+fqiDwn4e48J+HqiDQodGC0L7QutCz0L7Qu9GM0LwgX3E0N3hf
 [Interface]
 PrivateKey = 6HPuoj4tQ2XJQ4OwNg9tx1cFemJKuvzGkiyiht1CkG8=
@@ -128,9 +128,32 @@ Endpoint = sto1.vpntype.dev:4000
 AllowedIPs = 0.0.0.0/0
 PersistentKeepalive = 20
 
-# 3. 🔒 OpenVPN in-ru001:1021 _nvae_
-# = отличный · 11 Мбит/с · 4349 мс
-#profile-title: base64:8J+UkiBPcGVuVlBOIGluLXJ1MDAxOjEwMjEgX252YWVf
+# 3. 🟪 🇷🇺 Мадрид _ar8x_
+# = отличный · 11 Мбит/с · 5506 мс
+#profile-title: base64:8J+fqiDwn4e38J+HuiDQnNCw0LTRgNC40LQgX2FyOHhf
+[Interface]
+PrivateKey = EENmvwge/7ZP+8l9PsUsmd+W4UUjygY5YtEwApkyz1E=
+Address = 10.0.5.80/32
+DNS = 8.8.8.8
+Jc = 7
+Jmin = 99
+Jmax = 849
+S1 = 64
+S2 = 67
+H1 = 54295368
+H2 = 517417376
+H3 = 1758856487
+H4 = 497972157
+
+[Peer]
+PublicKey = Dl5NwzZ9kQ812JUvEWRGhuhyHu7d1xEQnABpSR5R03E=
+Endpoint = mad1.vpntype.dev:5555
+AllowedIPs = 0.0.0.0/0
+PersistentKeepalive = 20
+
+# 4. 🔒 🇺🇸 OpenVPN in-ru001:1021 _nvae_
+# = отличный · 10 Мбит/с · 880 мс
+#profile-title: base64:8J+UkiDwn4e68J+HuCBPcGVuVlBOIGluLXJ1MDAxOjEwMjEgX252YWVf
 client
 proto udp
 dev tun
@@ -226,8 +249,8 @@ user3140786
 ZeffY8GiPY0fA7o1Istkz7idzaKD5VSm
 </auth-user-pass>
 
-# 4. 🔒 🇷🇺 OpenVPN in-ru008:3003 _5p29_
-# = практически непригодный · 0,6 Мбит/с · 4921 мс
+# 5. 🔒 🇷🇺 OpenVPN in-ru008:3003 _5p29_
+# = практически непригодный · 0,5 Мбит/с · 7539 мс
 #profile-title: base64:8J+UkiDwn4e38J+HuiBPcGVuVlBOIGluLXJ1MDA4OjMwMDMgXzVwMjlf
 client
 proto udp
