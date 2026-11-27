@@ -1,31 +1,109 @@
 # Ручки для дверей
 
-# 1. 🟪 🇷🇺 Мадрид _ar8x_
-# = отличный · 11 Мбит/с · 488 мс
-#profile-title: base64:8J+fqiDwn4e38J+HuiDQnNCw0LTRgNC40LQgX2FyOHhf
-[Interface]
-PrivateKey = EENmvwge/7ZP+8l9PsUsmd+W4UUjygY5YtEwApkyz1E=
-Address = 10.0.5.80/32
-DNS = 8.8.8.8
-Jc = 7
-Jmin = 99
-Jmax = 849
-S1 = 64
-S2 = 67
-H1 = 54295368
-H2 = 517417376
-H3 = 1758856487
-H4 = 497972157
+# 1. 🔒 🇷🇺 OpenVPN mos5 _j3cs_
+# = отличный · 12 Мбит/с · 166 мс
+#profile-title: base64:8J+UkiDwn4e38J+HuiBPcGVuVlBOIG1vczUgX2ozY3Nf
+client
+proto udp
+dev tun
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+remote-cert-tls server
+verify-x509-name server name
+auth SHA256
+auth-user-pass
+cipher AES-128-GCM
+tls-client
+tls-version-min 1.2
+tls-cipher TLS-ECDHE-RSA-WITH-AES-128-GCM-SHA256:TLS-ECDHE-ECDSA-WITH-AES-128-GCM-SHA256
+ignore-unknown-option block-outside-dns
+verb 3
+remote mos5.vpntype.dev 1194
+<ca>
+-----BEGIN CERTIFICATE-----
+MIIDSzCCAjOgAwIBAgIUb457vDKnK4731FVW+ZG6kpgXLMUwDQYJKoZIhvcNAQEL
+BQAwFjEUMBIGA1UEAwwLRWFzeS1SU0EgQ0EwHhcNMjYwMTIxMDcwNDQ5WhcNMzYw
+MTE5MDcwNDQ5WjAWMRQwEgYDVQQDDAtFYXN5LVJTQSBDQTCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAK3on55UIxOdI3gW5FemSjjQNPUEMJkIZe1UgAmb
+QeIkt/eLkwNYytKzBcGwr8O2Ik0mwCfIpg8DCPoaPAB0JqVoBakESv8GM8D4E9Qa
+0wB2cGvA27WsaWZ1pYsGCWbyqYLveTU8EgYlEDJVFJ+5+7BLbKbvVTxzSbwVD0R6
+7XQQiK5VPJktwbZQ1yw5b5+Ao3RhO8XfALmMsSK28ImnlLiaBsxvLudUGbmp2ar4
+6VgehhTlrGl0s160RnNX/aJIutOL0PEOe2A02kfJdd1aHYLcilrNPfS7jTQ1HZ+F
+UBUvUrWUGowybDpuD8U1F5Z36V6STMV9dlPSpOR/jaQrSOMCAwEAAaOBkDCBjTAd
+BgNVHQ4EFgQUvR1qt39no6s5+CCH0DCBWwgckGYwUQYDVR0jBEowSIAUvR1qt39n
+o6s5+CCH0DCBWwgckGahGqQYMBYxFDASBgNVBAMMC0Vhc3ktUlNBIENBghRvjnu8
+MqcrjvfUVVb5kbqSmBcsxTAMBgNVHRMEBTADAQH/MAsGA1UdDwQEAwIBBjANBgkq
+hkiG9w0BAQsFAAOCAQEAlDAZidodkg+bFwXQ26HUcD54Al0RV3KMjX/kQ5F4Llu9
+D7LxDj1Oqw5meGJnxeOQ8ZidZiM9nvoyIcv3rQIgRb29MLOLMZuNTQBeCKwBrVQ5
+f2ej8hvvtHbO6JzPHeN/afnGvd8SKhKtr332LSG1zd2iRCzqQrRFgKRviloUUxSi
+HCDOWeuMLmbhwPD8VCJfkuKXYOHrLN0TY/f6BqX6TD0TqgMsFLrSPNZndMZnq/Av
+3dPT0+UCkP5ocQcr8ZrL05a54yFv67cdIUMPoiA7Ybr+tvPGZmWSXu9zxjz6maAR
+H7HxdlX7bNu92w/gkega7uCGVc7StG9zfsrS+CqGQQ==
+-----END CERTIFICATE-----
+</ca>
+<cert>
+-----BEGIN CERTIFICATE-----
+MIIDbzCCAlegAwIBAgIRAIZ28v1546V8bAyFII+WKjEwDQYJKoZIhvcNAQELBQAw
+FjEUMBIGA1UEAwwLRWFzeS1SU0EgQ0EwHhcNMjYwMTIxMDcwNDQ5WhcNMjgwNDI1
+MDcwNDQ5WjArMSkwJwYDVQQDDCBudWpKbHdzWkU4amViU2xWUUY0bTNJdkJRQTlY
+QnprVDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMIPs6Mb0NALyrVT
+Wse+bP80T+qvn/tM7OT4Ee9Re4Yg133eqmJc5JZrnkkOfEHdfnvCwWKgdDOMwteA
+puGLdwwIgqCe5O30padfDwDPtXaNYejBto2A1/tMIRwnP6Lw+5XGQUYSmZZqp3yV
+StDTGKSOWaCLRlZMVBi02MFs9Vu5nS7Gu+x2L2bZ3TYj8246LnOexIOeWBO3Rozx
+gh8mdZFAYajs7V739ktdDyn1KbiVqrjb5K/fwoubgFlZnMvrnoNDNmCJ3a/mgc8U
+BhfADIU0dTPfayqWvlz9nCBurRrflTrMLmz0wMi10POcWgBvcSzbf27obrsIH71L
+DuTGDtsCAwEAAaOBojCBnzAJBgNVHRMEAjAAMB0GA1UdDgQWBBSyEGP9pA42+FGk
+UEhpIBWhw6khKDBRBgNVHSMESjBIgBS9HWq3f2ejqzn4IIfQMIFbCByQZqEapBgw
+FjEUMBIGA1UEAwwLRWFzeS1SU0EgQ0GCFG+Oe7wypyuO99RVVvmRupKYFyzFMBMG
+A1UdJQQMMAoGCCsGAQUFBwMCMAsGA1UdDwQEAwIHgDANBgkqhkiG9w0BAQsFAAOC
+AQEAYhubvZ08pcB6C+RKCwwa8cp1HYMD6kzOo9Mpy669WuOPmDeE4PUFrWFFHft/
+Qx2s5w5ZegtNXmV+XG3GgDOUN0kOy74da9Lq8jzLGB0fXx5jca0xPiGlnVCeMXWo
+AOjnAsGBCgLVZN4nzUog8lYHKRD84eAgAvcuE//yNS7tnxZ7bmH9KfMvr+aelHyx
+7xFbYOK/SqnlbjJ+Voba3ig+0rhLlSGgt1dbPIiGA27so32LgYgM1cD2M8uZM2sT
+bNusBLpcpTv0brN4kbvd9shLYi9LF/77NF3OxKLSjF/7Wf+JiDuUjiBIDqJRHM5Q
+Arx+RF30bvSlx4QB79UXuLSAzw==
+-----END CERTIFICATE-----
+</cert>
+<key>
+-----BEGIN PRIVATE KEY-----
+MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDCD7OjG9DQC8q1
+U1rHvmz/NE/qr5/7TOzk+BHvUXuGINd93qpiXOSWa55JDnxB3X57wsFioHQzjMLX
+gKbhi3cMCIKgnuTt9KWnXw8Az7V2jWHowbaNgNf7TCEcJz+i8PuVxkFGEpmWaqd8
+lUrQ0xikjlmgi0ZWTFQYtNjBbPVbuZ0uxrvsdi9m2d02I/NuOi5znsSDnlgTt0aM
+8YIfJnWRQGGo7O1e9/ZLXQ8p9Sm4laq42+Sv38KLm4BZWZzL656DQzZgid2v5oHP
+FAYXwAyFNHUz32sqlr5c/Zwgbq0a35U6zC5s9MDItdDznFoAb3Es239u6G67CB+9
+Sw7kxg7bAgMBAAECggEAO6tGSdXIq9+kUYKyvA4SR5oXJIshvsxVXsXkBdjhCUnZ
+2Ir5issTQikO/1mj3UC0nmswuRmrARq74jVdmqYeUaXgPHD+5Se/M6pn25ECM9Sf
+EUlWz0WZo1wyJgzvZTOBt/jAo0Ie1YAvxX/GBFWUEyzt5A5O70QC66HXsAnHm476
+yBaIewGQnwP26fYLGYqeaa3PyfR3ghoGWt9lmyBtVh2v9qjNpx9o21dMuMLCJl3E
+tUcBUkICqnvvWyDDKetyIQ3gFWxe2amiL77HG0bKXNnGjfH6v9RMGq8uOi/AdVKQ
+EfY1INDm0qycYZ5QC1QTnHoMs0wpg24ZJkkANenbYQKBgQDqN9HhrohJ2i1elHJ+
+6zZZilPqssmwlvIHkpVJaQ5wNOETl4/8qGWAr4ckzVuieQoOOBr/Yu19S9Ajv3jI
+6JBhOgJs8UyrReM6msoycE36eh1eSrt9VCXiBNtNTZ1Rjzg9luHzRm3uN3BTlaUm
+nDbQTy1Eiiii2GOH/RNxQLh+qwKBgQDUG9hZmzB7x9eMuKzoAoeJFuwv0Aou8Z2q
+v34fZer95Ym5DqW30AFAgkKi4ARyb/YvWU+bFHj1zeUGqDt69qvsI4ja+Z5uNjmN
+SbH6C44Zq5rDHjyUL/dIkhLfofiKoDvpX/hRmSr9QjIaQnPVBHTO8wcbBv0Lk3nc
+kGJsGJLwkQKBgQC3ReqToBDBSVoLEjntmnwy4Iz9r90ms1a8GjV69hv4LUiaHhTr
+bZHPeopTf+XeYrw9mCV4BZ80ViiOcHtBKsofalcPjFmkA9Hkv87MXRiHkRp9+Bhx
+33CtRYOdH8ikU198wh4YUNogd30LyqMqbT5vDiWr5jgaBR0NAjk+e5hidQKBgQDR
+1jZD946QdlTdJ3oPESmKyv2gE31vkaJ8YHNilo5S3flQ9ZemcAY9DmDkByD/IZp4
+ny9s6WT9L9MKsfYeINhWhZUHpPlCaSyohSaoizPqW2WA8HHX3FgUGEbJrNBYPErp
+BwN/njr0T7+HUQSM0ZrJfY4jA9fk0uI0/TYRYIJFsQKBgQDWcX6YNNOeArJPIPFG
+elTNfP7qOD5TtoNzAofNkDaEgmWD1YmlMhFdHaVNGtz2tYZYvrh8Y6Sp9/OrthcD
+SfPx+6/IBTGqvEidVdJm0eN4h4hHa43ujCdN56fvTs0AhpAbJ03u/jBk817Huj1s
+kSGlCwtF5WeqGGLzn3sW9tFNrQ==
+-----END PRIVATE KEY-----
+</key>
+<auth-user-pass>
+user3140786
+P9RiEzszTxnqwrcBW7teUKn6C4FSCvnf
+</auth-user-pass>
 
-[Peer]
-PublicKey = Dl5NwzZ9kQ812JUvEWRGhuhyHu7d1xEQnABpSR5R03E=
-Endpoint = mad1.vpntype.dev:5555
-AllowedIPs = 0.0.0.0/0
-PersistentKeepalive = 20
-
-# 2. 🔒 🇺🇸 OpenVPN in-ru001:1021 _nvae_
-# = отличный · 11 Мбит/с · 760 мс
-#profile-title: base64:8J+UkiDwn4e68J+HuCBPcGVuVlBOIGluLXJ1MDAxOjEwMjEgX252YWVf
+# 2. 🔒 OpenVPN in-ru001:1021 _nvae_
+# = отличный · 11 Мбит/с · 4519 мс
+#profile-title: base64:8J+UkiBPcGVuVlBOIGluLXJ1MDAxOjEwMjEgX252YWVf
 client
 proto udp
 dev tun
@@ -121,9 +199,9 @@ user3140786
 ZeffY8GiPY0fA7o1Istkz7idzaKD5VSm
 </auth-user-pass>
 
-# 3. 🔒 OpenVPN in-ru001:1194 _djgx_
-# = хороший · 5,1 Мбит/с · 969 мс
-#profile-title: base64:8J+UkiBPcGVuVlBOIGluLXJ1MDAxOjExOTQgX2RqZ3hf
+# 3. 🔒 🇺🇸 OpenVPN in-ru001:1194 _djgx_
+# = отличный · 11 Мбит/с · 987 мс
+#profile-title: base64:8J+UkiDwn4e68J+HuCBPcGVuVlBOIGluLXJ1MDAxOjExOTQgX2RqZ3hf
 client
 proto udp
 dev tun
@@ -225,7 +303,7 @@ AKk4rDhrltBbelUxMuIgwYDxITm80u7q
 </auth-user-pass>
 
 # 4. 🟪 🇸🇪 Стокгольм _q47x_
-# = медленный · 1,7 Мбит/с · 4147 мс
+# = хороший · 7,0 Мбит/с · 4193 мс
 #profile-title: base64:8J+fqiDwn4e48J+HqiDQodGC0L7QutCz0L7Qu9GM0LwgX3E0N3hf
 [Interface]
 PrivateKey = 6HPuoj4tQ2XJQ4OwNg9tx1cFemJKuvzGkiyiht1CkG8=
@@ -250,7 +328,7 @@ AllowedIPs = 0.0.0.0/0
 PersistentKeepalive = 20
 
 # 5. 🔒 OpenVPN in-ru008:3003 _5p29_
-# = практически непригодный · 0,9 Мбит/с · 6608 мс
+# = медленный · 1,9 Мбит/с · 4866 мс
 #profile-title: base64:8J+UkiBPcGVuVlBOIGluLXJ1MDA4OjMwMDMgXzVwMjlf
 client
 proto udp
@@ -351,3 +429,25 @@ A2dLDrraaZTyc9iOiAyolD4=
 user3140786
 P9RiEzszTxnqwrcBW7teUKn6C4FSCvnf
 </auth-user-pass>
+
+# 6. 🟪 🇷🇺 Мадрид _ar8x_
+#profile-title: base64:8J+fqiDwn4e38J+HuiDQnNCw0LTRgNC40LQgX2FyOHhf
+[Interface]
+PrivateKey = EENmvwge/7ZP+8l9PsUsmd+W4UUjygY5YtEwApkyz1E=
+Address = 10.0.5.80/32
+DNS = 8.8.8.8
+Jc = 7
+Jmin = 99
+Jmax = 849
+S1 = 64
+S2 = 67
+H1 = 54295368
+H2 = 517417376
+H3 = 1758856487
+H4 = 497972157
+
+[Peer]
+PublicKey = Dl5NwzZ9kQ812JUvEWRGhuhyHu7d1xEQnABpSR5R03E=
+Endpoint = mad1.vpntype.dev:5555
+AllowedIPs = 0.0.0.0/0
+PersistentKeepalive = 20
