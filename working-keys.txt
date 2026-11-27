@@ -1,7 +1,7 @@
 # Ручки для дверей
 
 # 1. 🟪 🇷🇺 Мадрид _ar8x_
-# = отличный · 12 Мбит/с · 501 мс
+# = отличный · 12 Мбит/с · 534 мс
 #profile-title: base64:8J+fqiDwn4e38J+HuiDQnNCw0LTRgNC40LQgX2FyOHhf
 [Interface]
 PrivateKey = EENmvwge/7ZP+8l9PsUsmd+W4UUjygY5YtEwApkyz1E=
@@ -24,7 +24,7 @@ AllowedIPs = 0.0.0.0/0
 PersistentKeepalive = 20
 
 # 2. 🔒 🇺🇸 OpenVPN in-ru001:1194 _djgx_
-# = отличный · 11 Мбит/с · 996 мс
+# = отличный · 11 Мбит/с · 937 мс
 #profile-title: base64:8J+UkiDwn4e68J+HuCBPcGVuVlBOIGluLXJ1MDAxOjExOTQgX2RqZ3hf
 client
 proto udp
@@ -127,7 +127,7 @@ AKk4rDhrltBbelUxMuIgwYDxITm80u7q
 </auth-user-pass>
 
 # 3. 🔒 🇺🇸 OpenVPN in-ru001:1021 _nvae_
-# = отличный · 11 Мбит/с · 2729 мс
+# = отличный · 11 Мбит/с · 809 мс
 #profile-title: base64:8J+UkiDwn4e68J+HuCBPcGVuVlBOIGluLXJ1MDAxOjEwMjEgX252YWVf
 client
 proto udp
@@ -225,7 +225,7 @@ ZeffY8GiPY0fA7o1Istkz7idzaKD5VSm
 </auth-user-pass>
 
 # 4. 🟪 🇸🇪 Стокгольм _q47x_
-# = отличный · 11 Мбит/с · 4561 мс
+# = отличный · 11 Мбит/с · 3937 мс
 #profile-title: base64:8J+fqiDwn4e48J+HqiDQodGC0L7QutCz0L7Qu9GM0LwgX3E0N3hf
 [Interface]
 PrivateKey = 6HPuoj4tQ2XJQ4OwNg9tx1cFemJKuvzGkiyiht1CkG8=
@@ -248,3 +248,106 @@ PublicKey = e6blVx+SmVlVd++qcCpNV/7iStWKWeSj4ZeORe3qUnw=
 Endpoint = sto1.vpntype.dev:4000
 AllowedIPs = 0.0.0.0/0
 PersistentKeepalive = 20
+
+# 5. 🔒 🇷🇺 OpenVPN in-ru008:3003 _5p29_
+# = практически непригодный · 0,9 Мбит/с · 526 мс
+#profile-title: base64:8J+UkiDwn4e38J+HuiBPcGVuVlBOIGluLXJ1MDA4OjMwMDMgXzVwMjlf
+client
+proto udp
+dev tun
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+remote-cert-tls server
+verify-x509-name server name
+auth SHA256
+auth-user-pass
+cipher AES-128-GCM
+tls-client
+tls-version-min 1.2
+tls-cipher TLS-ECDHE-RSA-WITH-AES-128-GCM-SHA256:TLS-ECDHE-ECDSA-WITH-AES-128-GCM-SHA256
+ignore-unknown-option block-outside-dns
+setenv opt block-outside-dns
+verb 3
+
+remote in-ru008.vpntype.dev 3003
+<ca>
+-----BEGIN CERTIFICATE-----
+MIIDSzCCAjOgAwIBAgIULm9mbbwNkMdgN5xEZa0BtWcPoLMwDQYJKoZIhvcNAQEL
+BQAwFjEUMBIGA1UEAwwLRWFzeS1SU0EgQ0EwHhcNMjYwODA3MDYzNjUwWhcNMzYw
+ODA0MDYzNjUwWjAWMRQwEgYDVQQDDAtFYXN5LVJTQSBDQTCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAJ4RiH71MIL7qTjiuMykwW+VTYaNSzubDmV25029
+/jqkzJWHoDAJGPvq+g85wVK4w0S6scmiIYigy0Qevct8AsUsnJmqnGlNNKiLJUB5
+2FxWXozWZcZ3kohl+MaEQ+r6ZCiKycxAt6mkbF1UNjaTsoSMkdbXiESVOxD4vJtp
+nYRn3GAOkcRzsGIFkii6GJ6FQARr0hy2GlLNnZcA1sfHKSDVOgh2qh3FGqUA37ui
+ro/uAbFpemcJo80dUETOv/fKHGZWx+On8KchE6dmOKqoZOhNn+rFYFh2L77rH4Zo
+0Xb3C77B+MAP7p9kRTnTT2qH9yJ1goYyecd1FtubOMVr0GMCAwEAAaOBkDCBjTAd
+BgNVHQ4EFgQURE36PpK6bMdlaSUFOX9UgANmAeQwUQYDVR0jBEowSIAURE36PpK6
+bMdlaSUFOX9UgANmAeShGqQYMBYxFDASBgNVBAMMC0Vhc3ktUlNBIENBghQub2Zt
+vA2Qx2A3nERlrQG1Zw+gszAMBgNVHRMEBTADAQH/MAsGA1UdDwQEAwIBBjANBgkq
+hkiG9w0BAQsFAAOCAQEAQhH3yBEpSnqoDy3mvjXIiNf5wmfeDQHKREgJ7sim4QBP
+bAylg12OGssBH4p/EyA5fAoPIa5PaVaCcp2kBpfjWa/VTfeSM6Kc4xpJI2HdHXtm
+Xf+Idcvgg7GbulYJynQFf/5bq7b0FjlvuQFISS5gwfpXFYTF2N90xQSUqJmte68P
+zhE9BeBI2ktHo5EIWpDKa3BcYyDGVnIiS3E5ii7nlJQx/Y/xd5ZqilajTg2F6PZf
+4nnsQvelLuaV6AdvF9C0e0eICRbh971hnyF5f5zKEFTViWWi5OZNg0YwXiiQM6D5
+NGC10GCuCUCL1P4t+Gh3fEeALWZNzPusl92h3puj8w==
+-----END CERTIFICATE-----
+</ca>
+<cert>
+-----BEGIN CERTIFICATE-----
+MIIDbzCCAlegAwIBAgIRAK6iUuPlZk0tBBN0IsZYW4swDQYJKoZIhvcNAQELBQAw
+FjEUMBIGA1UEAwwLRWFzeS1SU0EgQ0EwHhcNMjYwODA3MDYzNjUyWhcNMjgxMTA5
+MDYzNjUyWjArMSkwJwYDVQQDDCBTZExSQzc1R01mMzNnQ0lIcWhPMzZma0JPNFJC
+a1JuQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMGyx0hWXBQGF88C
+5xNiXHGfE6EEedW7JMp/g5qujwTwOC7XABY4kvw+pHFIbMnk6+fRl3CgfbmX5y3r
+pcL9CGW2cQux6u562vyC2POnG3q+p5o1PEbDjW+U0zNwmG+U2s8IsBvanZnWG9FY
+ZGFm/4HnavysWMYhzGjdWAQriLuyo3bTS6I1rWAMngZTu6RbYSUx/szzPqpzKJTK
+761/3M4CXXu2GEfyZeLYdX4OO9WbFEbDjmnf2UJXjfUOGmlmLmKpSvhS8qhSDab7
+ylPnnAKsm2f3N+6xoNkz+8y3fmfuCr81MMKa6HXQ/NS3Ny+ImT1ZXW1FOmxM41bB
+EYmv2R8CAwEAAaOBojCBnzAJBgNVHRMEAjAAMB0GA1UdDgQWBBT5GKI4vMgbC7zK
+fWY86dx2FKQgdTBRBgNVHSMESjBIgBRETfo+krpsx2VpJQU5f1SAA2YB5KEapBgw
+FjEUMBIGA1UEAwwLRWFzeS1SU0EgQ0GCFC5vZm28DZDHYDecRGWtAbVnD6CzMBMG
+A1UdJQQMMAoGCCsGAQUFBwMCMAsGA1UdDwQEAwIHgDANBgkqhkiG9w0BAQsFAAOC
+AQEAesltoVAx5u1VmwodUWxG8DCiqxgNPpcesEKYWJmxXaaqk8CcsJeMkkq6Unuj
+/agSb80coK/8KuN9nxZxuIEbV+/hn2yG37TT3esACQ600OBomvDYEaTuhbol9VG/
+MIwctzXl/2JGvx8vluEAzjroz0VINxhVFHxbZ8Z2jvf1oql8otSW0FQuih4eMZUU
+KTkDGAT+AyxbBuWyqBfViIkBRWuivz/0uV8fUPWuYkSecrROUD7Ts7mK9QwTBeGP
+lkIQSZrgiAVklRYH0rHh9FSQ1Vakf+UCSwlH56x+o7vjua6cdAGJhh305R5zoAGk
+oE3SAcIoK9eiha2LH8/3VkwPtg==
+-----END CERTIFICATE-----
+</cert>
+<key>
+-----BEGIN PRIVATE KEY-----
+MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDBssdIVlwUBhfP
+AucTYlxxnxOhBHnVuyTKf4Oaro8E8Dgu1wAWOJL8PqRxSGzJ5Ovn0ZdwoH25l+ct
+66XC/QhltnELseruetr8gtjzpxt6vqeaNTxGw41vlNMzcJhvlNrPCLAb2p2Z1hvR
+WGRhZv+B52r8rFjGIcxo3VgEK4i7sqN200uiNa1gDJ4GU7ukW2ElMf7M8z6qcyiU
+yu+tf9zOAl17thhH8mXi2HV+DjvVmxRGw45p39lCV431DhppZi5iqUr4UvKoUg2m
++8pT55wCrJtn9zfusaDZM/vMt35n7gq/NTDCmuh10PzUtzcviJk9WV1tRTpsTONW
+wRGJr9kfAgMBAAECggEATbRds8xJRhMnq/k7IBCei0pIwpicE7zuxnmfHweWAmIn
+98pyk3eAp8ati3CFi/zVEnuHaDxKE5E3wbk+F1oQ61TkRs/KMn+AqDoJtL0+DeC8
+NeXTV4QNkky+6WzrCiBKIzIWDCaIgPVe1X3DTzvVlpRy3Ah72Igoi4z4STv5r2oI
+6QecDcsFO8x8ouMw58chBk0JjbE7Xjy4K9RmEkx+DOgbx/WPugHsttoI7n2p1QyB
+yHXubQeHPDs45JB5cRSJgWRdGbCvduCyVC4Wq8ztE8S2sjGmaidEQ7y37/eccgTu
+Tb/Du0aPgncpC25dDSr4kiDjy/yDnpTfEijGHNPm8QKBgQDj5ihrvZMypgbK8DjX
+36paIMhZL/pQYTk8l+S/1RNVf79k7KsujyP67jJHkJ9PjQQJjPgP9ZwpUsv0V2wB
+0mErFFQwLYZR54UiUb7W4PoVcNXYTlXWBsu/fFOZK6+E799P2orGyXPitblC2/yg
+fy7dehQrYug9WTniQZptyTEN1wKBgQDZlQtNDXi+4P5fEvOuHec0+3QxlnDabWij
+BZu/RuL80duiJASdt70WnUyl8VeC/RMuyGdHs9HCf0LzJrCnL3cHjVVN6WzBFbUA
+tQ665YJSEeACBcrbXAlM0ntz8d0i+22ErgUe6zI7ZuTGzyWsYMwvzLh5fjkK8vTN
+iyDGdYdV+QKBgFFn+3RQ6W2kJLUFDij+eilroGVLYAyqTfm5ADsN77QQx9tTNuqQ
+sveFcmxh2qZd5t1Kf6mjwD56luQW/jvAXHk478Gt4VcMbmAN9y9mea6C+cAka0Di
+eJFT5cDG/BFuZcRuejf76etHon+heSITjDgMzXuZ/v87ChQp/vHMdjtNAoGBALd+
+8Obso5Ym3Z+EtilzYpfWMKnZPBeaCZLimfT4bVnWCip1wcbZPAikZA3WuXzovZLI
+xAE+b3peJTI2wOheKT4fPX/VijhUfC+6gk+wWvWnyYkrJWdV+SnmoOKpaVulOzmY
+IQ1wQQ7DudDIxfbYM5tkRXeAsc7AEyB9Ywi7+YTRAoGAGX2dYWg6MF6Abkpfj3g9
+uAxDm+0I4mI0IdVY0ggDXu25a1WcXxfiXj72TSJ61OvpJ8u9vXXJ/2PmjEVk4EBu
+cxxW3ESnQPgMtG3rt2moox4Fq0ylQjjFgBPFjb8byzx4nO8nv58Z8F3gFpp16+Z1
+A2dLDrraaZTyc9iOiAyolD4=
+-----END PRIVATE KEY-----
+</key>
+<auth-user-pass>
+user3140786
+P9RiEzszTxnqwrcBW7teUKn6C4FSCvnf
+</auth-user-pass>
