@@ -1,7 +1,7 @@
 # Ручки для дверей
 
 # 1. 🟪 🇷🇺 Мадрид _ar8x_
-# = отличный · 12 Мбит/с · 5460 мс
+# = отличный · 12 Мбит/с · 828 мс
 #profile-title: base64:8J+fqiDwn4e38J+HuiDQnNCw0LTRgNC40LQgX2FyOHhf
 [Interface]
 PrivateKey = EENmvwge/7ZP+8l9PsUsmd+W4UUjygY5YtEwApkyz1E=
@@ -24,7 +24,7 @@ AllowedIPs = 0.0.0.0/0
 PersistentKeepalive = 20
 
 # 2. 🔒 🇺🇸 OpenVPN in-ru001:1021 _nvae_
-# = отличный · 11 Мбит/с · 752 мс
+# = отличный · 11 Мбит/с · 878 мс
 #profile-title: base64:8J+UkiDwn4e68J+HuCBPcGVuVlBOIGluLXJ1MDAxOjEwMjEgX252YWVf
 client
 proto udp
@@ -122,7 +122,7 @@ ZeffY8GiPY0fA7o1Istkz7idzaKD5VSm
 </auth-user-pass>
 
 # 3. 🔒 🇺🇸 OpenVPN in-ru001:1194 _djgx_
-# = отличный · 11 Мбит/с · 21441 мс
+# = отличный · 11 Мбит/с · 1085 мс
 #profile-title: base64:8J+UkiDwn4e68J+HuCBPcGVuVlBOIGluLXJ1MDAxOjExOTQgX2RqZ3hf
 client
 proto udp
@@ -225,7 +225,7 @@ AKk4rDhrltBbelUxMuIgwYDxITm80u7q
 </auth-user-pass>
 
 # 4. 🟪 🇸🇪 Стокгольм _q47x_
-# = хороший · 9,9 Мбит/с · 4037 мс
+# = отличный · 10 Мбит/с · 4494 мс
 #profile-title: base64:8J+fqiDwn4e48J+HqiDQodGC0L7QutCz0L7Qu9GM0LwgX3E0N3hf
 [Interface]
 PrivateKey = 6HPuoj4tQ2XJQ4OwNg9tx1cFemJKuvzGkiyiht1CkG8=
@@ -250,7 +250,7 @@ AllowedIPs = 0.0.0.0/0
 PersistentKeepalive = 20
 
 # 5. 🔒 🇮🇱 OpenVPN in-ru001:5555 TCP _zbqg_
-# = хороший · 9,3 Мбит/с · 990 мс
+# = хороший · 8,1 Мбит/с · 815 мс
 #profile-title: base64:8J+UkiDwn4eu8J+HsSBPcGVuVlBOIGluLXJ1MDAxOjU1NTUgVENQIF96YnFnXw==
 client
 proto tcp
@@ -349,7 +349,7 @@ user3140786
 </auth-user-pass>
 
 # 6. 🔒 🇷🇺 OpenVPN in-ru008:3003 _5p29_
-# = практически непригодный · 1,0 Мбит/с · 647 мс
+# = медленный · 2,1 Мбит/с · 321 мс
 #profile-title: base64:8J+UkiDwn4e38J+HuiBPcGVuVlBOIGluLXJ1MDA4OjMwMDMgXzVwMjlf
 client
 proto udp
