@@ -1,7 +1,7 @@
 # Ручки для дверей
 
 # 1. 🔒 🇺🇸 OpenVPN in-ru001:1021 _nvae_
-# = отличный · 11 Мбит/с · 790 мс
+# = отличный · 11 Мбит/с · 789 мс
 #profile-title: base64:8J+UkiDwn4e68J+HuCBPcGVuVlBOIGluLXJ1MDAxOjEwMjEgX252YWVf
 client
 proto udp
@@ -99,7 +99,7 @@ ZeffY8GiPY0fA7o1Istkz7idzaKD5VSm
 </auth-user-pass>
 
 # 2. 🔒 🇺🇸 OpenVPN in-ru001:1194 _djgx_
-# = отличный · 11 Мбит/с · 1250 мс
+# = отличный · 11 Мбит/с · 1044 мс
 #profile-title: base64:8J+UkiDwn4e68J+HuCBPcGVuVlBOIGluLXJ1MDAxOjExOTQgX2RqZ3hf
 client
 proto udp
@@ -202,7 +202,7 @@ AKk4rDhrltBbelUxMuIgwYDxITm80u7q
 </auth-user-pass>
 
 # 3. 🟪 🇸🇪 Стокгольм _q47x_
-# = отличный · 11 Мбит/с · 3982 мс
+# = отличный · 11 Мбит/с · 3978 мс
 #profile-title: base64:8J+fqiDwn4e48J+HqiDQodGC0L7QutCz0L7Qu9GM0LwgX3E0N3hf
 [Interface]
 PrivateKey = 6HPuoj4tQ2XJQ4OwNg9tx1cFemJKuvzGkiyiht1CkG8=
@@ -227,7 +227,7 @@ AllowedIPs = 0.0.0.0/0
 PersistentKeepalive = 20
 
 # 4. 🔒 🇷🇺 OpenVPN in-ru008:3003 _5p29_
-# = медленный · 1,2 Мбит/с · 806 мс
+# = медленный · 2,7 Мбит/с · 429 мс
 #profile-title: base64:8J+UkiDwn4e38J+HuiBPcGVuVlBOIGluLXJ1MDA4OjMwMDMgXzVwMjlf
 client
 proto udp
